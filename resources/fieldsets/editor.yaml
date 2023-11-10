@@ -1,0 +1,869 @@
+title: Editor
+fields:
+  -
+    handle: editor
+    field:
+      always_show_set_button: false
+      sets:
+        foto_full_width:
+          display: 'Foto full width'
+          fields:
+            -
+              handle: full_width_foto
+              field:
+                mode: grid
+                container: assets
+                restrict: true
+                allow_uploads: true
+                max_files: 1
+                display: Foto
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              import: ombra
+              prefix: full_width_foto_
+            -
+              import: spaziatura
+        foto_container:
+          display: 'Foto container'
+          fields:
+            -
+              handle: container_foto
+              field:
+                mode: grid
+                container: assets
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                display: Foto
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              import: ombra
+              prefix: container_foto_
+            -
+              import: spaziatura
+            -
+              handle: caption
+              field:
+                always_show_set_button: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                display: Caption
+                type: bard
+                icon: bard
+                listable: hidden
+            -
+              import: dimensioni
+        titolo:
+          display: Titolo
+          fields:
+            -
+              handle: titolo
+              field:
+                input_type: text
+                antlers: false
+                display: Titolo
+                type: text
+                icon: text
+                listable: hidden
+            -
+              import: spaziatura
+        spazio:
+          display: Spazio
+          fields:
+            -
+              import: spaziatura
+              prefix: single_
+        margini:
+          display: Margini
+          fields:
+            -
+              handle: margini_superiori
+              field:
+                options:
+                  mt-0: mt-0
+                  mt-1: mt-1
+                  mt-2: mt-2
+                  mt-3: mt-3
+                  mt-4: mt-4
+                  mt-5: mt-5
+                  mt-6: mt-6
+                  mt-10: mt-10
+                  mt-20: mt-20
+                multiple: false
+                clearable: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                display: 'Margini superiori'
+                type: select
+                icon: select
+                listable: hidden
+            -
+              handle: margini_inferiori
+              field:
+                options:
+                  mb-0: mb-0
+                  mb-1: mb-1
+                  mb-2: mb-2
+                  mb-3: mb-3
+                  mb-4: mb-4
+                  mb-5: mb-5
+                  mb-6: mb-6
+                  mb-10: mb-10
+                  mb-20: mb-20
+                multiple: false
+                clearable: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                display: 'Margini inferiori'
+                type: select
+                icon: select
+                listable: hidden
+        stack:
+          display: Stack
+          fields:
+            -
+              handle: stack
+              field:
+                collapse: false
+                sets:
+                  add_stack:
+                    display: 'Add stack'
+                    fields:
+                      -
+                        handle: icona
+                        field:
+                          mode: grid
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          max_files: 1
+                          display: Icona
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                      -
+                        handle: tecnologia
+                        field:
+                          options:
+                            statamic: Statamic
+                            alpinejs: 'Alpine Js'
+                            tailwind: 'Tailwind CSS'
+                            gsap: GSAP
+                            cypress: Cypress
+                            ploi: Ploi
+                            zapier: Zapier
+                            snipcart: Snipcart
+                            vuejs: 'Vue Js'
+                            getform: Getform
+                            threejs: Three.js
+                            swiper: Swiper
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          taggable: false
+                          push_tags: false
+                          cast_booleans: false
+                          display: Tecnologia
+                          type: select
+                          icon: select
+                          listable: hidden
+                      -
+                        handle: tipo
+                        field:
+                          options:
+                            cms: CMS
+                            css: CSS
+                            automation: Automation
+                            tests: Tests
+                            deploy: Deploy
+                            shop: Shop
+                            js: Js
+                            form: Form
+                            animation: Animations
+                            slideshow: Slideshow
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          taggable: false
+                          push_tags: false
+                          cast_booleans: false
+                          display: Tipo
+                          type: select
+                          icon: select
+                          listable: hidden
+                display: Stack
+                type: replicator
+                icon: replicator
+                listable: hidden
+            -
+              handle: dimensione_grid
+              field:
+                options:
+                  'md:grid-cols-1': grid-cols-1
+                  'md:grid-cols-2': grid-cols-2
+                  'md:grid-cols-3': grid-cols-3
+                  'md:grid-cols-4': grid-cols-4
+                  'md:grid-cols-5': grid-cols-5
+                  'md:grid-cols-6': grid-cols-6
+                multiple: false
+                clearable: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                display: 'Dimensione grid'
+                type: select
+                icon: select
+                listable: hidden
+        html:
+          display: Html
+          fields:
+            -
+              handle: html
+              field:
+                theme: material
+                mode: htmlmixed
+                indent_type: tabs
+                indent_size: 4
+                key_map: default
+                line_numbers: true
+                line_wrapping: true
+                display: Html
+                type: code
+                icon: code
+                listable: hidden
+        foto_griglia:
+          display: 'Foto griglia'
+          fields:
+            -
+              handle: foto_a_griglia
+              field:
+                collapse: false
+                sets:
+                  aggiungi:
+                    display: Aggiungi
+                    fields:
+                      -
+                        handle: foto_griglia
+                        field:
+                          mode: grid
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          max_files: 1
+                          display: Foto
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                      -
+                        import: dimensioni
+                display: 'Foto a griglia'
+                type: replicator
+                icon: replicator
+                listable: hidden
+            -
+              handle: dimensione_grid
+              field:
+                options:
+                  grid-cols-1: grid-cols-1
+                  grid-cols-2: grid-cols-2
+                  grid-cols-3: grid-cols-3
+                  grid-cols-4: grid-cols-4
+                  grid-cols-5: grid-cols-5
+                  grid-cols-6: grid-cols-6
+                multiple: false
+                clearable: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                display: 'Dimensione grid'
+                type: select
+                icon: select
+                listable: hidden
+            -
+              import: spaziatura
+        elenco:
+          display: Elenco
+          fields:
+            -
+              handle: elenco
+              field:
+                collapse: false
+                sets:
+                  aggiungi:
+                    display: Aggiungi
+                    fields:
+                      -
+                        handle: titolo
+                        field:
+                          input_type: text
+                          antlers: false
+                          display: Titolo
+                          type: text
+                          icon: text
+                          listable: hidden
+                      -
+                        handle: icona
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          max_files: 1
+                          display: Icona
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                      -
+                        handle: descrizione
+                        field:
+                          restrict: false
+                          automatic_line_breaks: true
+                          automatic_links: false
+                          escape_markup: false
+                          smartypants: false
+                          antlers: false
+                          display: Descrizione
+                          type: markdown
+                          icon: markdown
+                          listable: hidden
+                display: Elenco
+                type: replicator
+                icon: replicator
+                listable: hidden
+        elenco_dettagliato:
+          display: 'Elenco dettagliato'
+          fields:
+            -
+              handle: elenco_dettagliato
+              field:
+                collapse: false
+                sets:
+                  aggiungi:
+                    display: Aggiungi
+                    fields:
+                      -
+                        handle: titolo
+                        field:
+                          input_type: text
+                          antlers: false
+                          display: Titolo
+                          type: text
+                          icon: text
+                          listable: hidden
+                      -
+                        handle: icona
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          max_files: 1
+                          display: Icona
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                      -
+                        handle: colore_bg
+                        field:
+                          options:
+                            bg-pink-50: bg-pink-50
+                            bg-pink-100: bg-pink-100
+                            bg-pink-200: bg-pink-800
+                            bg-pink-300: bg-pink-800
+                            bg-pink-400: bg-pink-800
+                            bg-pink-500: bg-pink-800
+                            bg-pink-600: bg-pink-800
+                            bg-pink-700: bg-pink-800
+                            bg-pink-800: bg-pink-800
+                            bg-pink-900: bg-pink-900
+                            bg-gray-50: bg-gray-50
+                            bg-gray-100: bg-gray-100
+                            bg-gray-200: bg-gray-800
+                            bg-gray-300: bg-gray-800
+                            bg-gray-400: bg-gray-800
+                            bg-gray-500: bg-gray-800
+                            bg-gray-600: bg-gray-800
+                            bg-gray-700: bg-gray-800
+                            bg-gray-800: bg-gray-800
+                            bg-gray-900: bg-gray-900
+                            bg-green-50: bg-green-50
+                            bg-green-100: bg-green-100
+                            bg-green-200: bg-green-800
+                            bg-green-300: bg-green-800
+                            bg-green-400: bg-green-800
+                            bg-green-500: bg-green-800
+                            bg-green-600: bg-green-800
+                            bg-green-700: bg-green-800
+                            bg-green-800: bg-green-800
+                            bg-green-900: bg-green-900
+                            bg-blue-50: bg-blue-50
+                            bg-blue-100: bg-blue-100
+                            bg-blue-200: bg-blue-800
+                            bg-blue-300: bg-blue-800
+                            bg-blue-400: bg-blue-800
+                            bg-blue-500: bg-blue-800
+                            bg-blue-600: bg-blue-800
+                            bg-blue-700: bg-blue-800
+                            bg-blue-800: bg-blue-800
+                            bg-blue-900: bg-blue-900
+                            bg-yellow-50: bg-yellow-50
+                            bg-yellow-100: bg-yellow-100
+                            bg-yellow-200: bg-yellow-800
+                            bg-yellow-300: bg-yellow-800
+                            bg-yellow-400: bg-yellow-800
+                            bg-yellow-500: bg-yellow-800
+                            bg-yellow-600: bg-yellow-800
+                            bg-yellow-700: bg-yellow-800
+                            bg-yellow-800: bg-yellow-800
+                            bg-yellow-900: bg-yellow-900
+                            bg-black: bg-black
+                            bg-white: bg-white
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          taggable: false
+                          push_tags: false
+                          cast_booleans: false
+                          display: 'Colore bg'
+                          type: select
+                          icon: select
+                          listable: hidden
+                      -
+                        handle: colore_titolo
+                        field:
+                          options:
+                            text-pink-50: text-pink-50
+                            text-pink-100: text-pink-100
+                            text-pink-200: text-pink-800
+                            text-pink-300: text-pink-800
+                            text-pink-400: text-pink-800
+                            text-pink-500: text-pink-800
+                            text-pink-600: text-pink-800
+                            text-pink-700: text-pink-800
+                            text-pink-800: text-pink-800
+                            text-pink-900: text-pink-900
+                            text-gray-50: text-gray-50
+                            text-gray-100: text-gray-100
+                            text-gray-200: text-gray-800
+                            text-gray-300: text-gray-800
+                            text-gray-400: text-gray-800
+                            text-gray-500: text-gray-800
+                            text-gray-600: text-gray-800
+                            text-gray-700: text-gray-800
+                            text-gray-800: text-gray-800
+                            text-gray-900: text-gray-900
+                            text-green-50: text-green-50
+                            text-green-100: text-green-100
+                            text-green-200: text-green-800
+                            text-green-300: text-green-800
+                            text-green-400: text-green-800
+                            text-green-500: text-green-800
+                            text-green-600: text-green-800
+                            text-green-700: text-green-800
+                            text-green-800: text-green-800
+                            text-green-900: text-green-900
+                            text-blue-50: text-blue-50
+                            text-blue-100: text-blue-100
+                            text-blue-200: text-blue-800
+                            text-blue-300: text-blue-800
+                            text-blue-400: text-blue-800
+                            text-blue-500: text-blue-800
+                            text-blue-600: text-blue-800
+                            text-blue-700: text-blue-800
+                            text-blue-800: text-blue-800
+                            text-blue-900: text-blue-900
+                            text-yellow-50: text-yellow-50
+                            text-yellow-100: text-yellow-100
+                            text-yellow-200: text-yellow-800
+                            text-yellow-300: text-yellow-800
+                            text-yellow-400: text-yellow-800
+                            text-yellow-500: text-yellow-800
+                            text-yellow-600: text-yellow-800
+                            text-yellow-700: text-yellow-800
+                            text-yellow-800: text-yellow-800
+                            text-yellow-900: text-yellow-900
+                            text-black: text-black
+                            text-white: text-white
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          taggable: false
+                          push_tags: false
+                          cast_booleans: false
+                          display: 'Colore titolo'
+                          type: select
+                          icon: select
+                          listable: hidden
+                      -
+                        handle: colore_testo
+                        field:
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          taggable: false
+                          push_tags: false
+                          cast_booleans: false
+                          display: 'Colore testo'
+                          type: select
+                          icon: select
+                          listable: hidden
+                      -
+                        handle: descrizione
+                        field:
+                          always_show_set_button: false
+                          buttons:
+                            - h2
+                            - h3
+                            - bold
+                            - italic
+                            - unorderedlist
+                            - orderedlist
+                            - removeformat
+                            - quote
+                            - anchor
+                            - image
+                            - table
+                          save_html: false
+                          toolbar_mode: fixed
+                          link_noopener: false
+                          link_noreferrer: false
+                          target_blank: false
+                          reading_time: false
+                          fullscreen: true
+                          allow_source: true
+                          enable_input_rules: true
+                          enable_paste_rules: true
+                          display: Descrizione
+                          type: bard
+                          icon: bard
+                          listable: hidden
+                display: 'Elenco dettagliato'
+                type: replicator
+                icon: replicator
+                listable: hidden
+        blocco_markdown:
+          display: 'Blocco Markdown'
+          fields:
+            -
+              handle: blocco_markdown
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: 'Blocco markdown'
+                type: markdown
+                icon: markdown
+                listable: hidden
+        numeri_minimal:
+          display: 'Numeri minimal'
+          fields:
+            -
+              handle: numeri_minimal
+              field:
+                collapse: false
+                sets:
+                  aggiungi:
+                    display: Aggiungi
+                    fields:
+                      -
+                        handle: numero
+                        field:
+                          input_type: text
+                          antlers: false
+                          display: Numero
+                          type: text
+                          icon: text
+                          listable: hidden
+                      -
+                        handle: descrizione
+                        field:
+                          always_show_set_button: false
+                          buttons:
+                            - h2
+                            - h3
+                            - bold
+                            - italic
+                            - unorderedlist
+                            - orderedlist
+                            - removeformat
+                            - quote
+                            - anchor
+                            - image
+                            - table
+                          save_html: false
+                          toolbar_mode: fixed
+                          link_noopener: false
+                          link_noreferrer: false
+                          target_blank: false
+                          reading_time: false
+                          fullscreen: true
+                          allow_source: true
+                          enable_input_rules: true
+                          enable_paste_rules: true
+                          display: Descrizione
+                          type: bard
+                          icon: bard
+                          listable: hidden
+                display: 'Numeri minimal'
+                type: replicator
+                icon: replicator
+                listable: hidden
+        elenco_da_blog:
+          display: 'Elenco con numeri'
+          fields:
+            -
+              handle: numero
+              field:
+                display: Numero
+                type: integer
+                icon: integer
+                listable: hidden
+            -
+              handle: titolo
+              field:
+                input_type: text
+                antlers: false
+                display: Titolo
+                type: text
+                icon: text
+                listable: hidden
+            -
+              import: spaziatura
+        elenco_semplice:
+          display: 'Elenco semplice'
+          fields:
+            -
+              handle: listasemplice
+              field:
+                collapse: false
+                sets:
+                  aggiungi:
+                    display: Aggiungi
+                    fields:
+                      -
+                        handle: testo
+                        field:
+                          input_type: text
+                          antlers: false
+                          display: Testo
+                          type: text
+                          icon: text
+                          listable: hidden
+                      -
+                        handle: icona
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          max_files: 1
+                          display: Icona
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                display: Lista
+                type: replicator
+                icon: replicator
+                listable: hidden
+        banner:
+          display: Banner
+          fields:
+            -
+              handle: testo
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: Testo
+                type: markdown
+                icon: markdown
+                listable: hidden
+                instructions_position: above
+            -
+              handle: colore
+              field:
+                theme: classic
+                lock_opacity: false
+                default_color_mode: HEXA
+                color_modes:
+                  - HEXA
+                display: 'Colore dello sfondo'
+                type: color
+                icon: color
+                listable: hidden
+                instructions_position: above
+            -
+              handle: colore_del_testo
+              field:
+                theme: classic
+                lock_opacity: false
+                default_color_mode: HEXA
+                color_modes:
+                  - HEXA
+                display: 'Colore del testo'
+                type: color
+                icon: color
+                listable: hidden
+                instructions_position: above
+            -
+              handle: allineamento
+              field:
+                options:
+                  text-left: Sinistra
+                  text-right: Destra
+                  text-center: Centro
+                multiple: false
+                clearable: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                display: Allineamento
+                type: select
+                icon: select
+                listable: hidden
+                instructions_position: above
+        elenco_credits:
+          display: 'Elenco credits'
+          fields:
+            -
+              handle: elenco
+              field:
+                collapse: false
+                sets:
+                  aggiungi:
+                    display: Aggiungi
+                    fields:
+                      -
+                        handle: titolo_sezione
+                        field:
+                          input_type: text
+                          antlers: false
+                          display: 'Titolo sezione'
+                          type: text
+                          icon: text
+                          listable: hidden
+                          instructions_position: above
+                      -
+                        handle: persona
+                        field:
+                          collapse: false
+                          sets:
+                            aggiungi:
+                              display: Aggiungi
+                              fields:
+                                -
+                                  handle: nome_e_cognome
+                                  field:
+                                    input_type: text
+                                    antlers: false
+                                    display: 'Nome e cognome'
+                                    type: text
+                                    icon: text
+                                    listable: hidden
+                                    instructions_position: above
+                                -
+                                  handle: ruolo
+                                  field:
+                                    options:
+                                      coordinamento: Coordinamento
+                                      sviluppatore: Sviluppatore
+                                      sistemista: Sistemista
+                                      referente-area-tecnica: 'Referente area tecnica'
+                                      referente-area-formazione: 'Referente area formazione'
+                                      presidente: Presidente
+                                      presidentessa: Presidentessa
+                                      dirigente-di-ricerca: 'Dirigente di ricerca'
+                                      dirigente-tecnologo: 'Dirigente tecnologo'
+                                      primo-tecnologo: 'Primo tecnologo'
+                                      supporto-al-coordinamento: 'Supporto al coordinamento'
+                                      referente-area-tecnologica: 'Referente dell''area tecnologica'
+                                      direttore-generale: 'Direttore generale'
+                                    multiple: false
+                                    clearable: false
+                                    searchable: true
+                                    taggable: false
+                                    push_tags: false
+                                    cast_booleans: false
+                                    display: Ruolo
+                                    type: select
+                                    icon: select
+                                    listable: hidden
+                                    instructions_position: above
+                          display: Persona
+                          type: replicator
+                          icon: replicator
+                          listable: hidden
+                          instructions_position: above
+                display: Elenco
+                type: replicator
+                icon: replicator
+                listable: hidden
+                instructions_position: above
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: true
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      display: Editor
+      type: bard
+      icon: bard
+      listable: hidden
+      localizable: true
+      instructions_position: above

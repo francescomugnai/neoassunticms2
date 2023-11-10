@@ -1,0 +1,180 @@
+title: Dati
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: utenti_piattaforma
+        field:
+          collapse: false
+          sets:
+            aggiungi:
+              display: Aggiungi
+              fields:
+                -
+                  handle: numero
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Numero
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  import: select_dati
+          display: 'Utenti piattaforma'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          max_sets: 2
+      -
+        handle: dati_sui_bilanci
+        field:
+          collapse: false
+          sets:
+            aggiungi:
+              display: Aggiungi
+              fields:
+                -
+                  handle: numero
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: numero
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  import: select_dati
+          display: 'Dati sui bilanci'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+      -
+        handle: dati_sui_questionari
+        field:
+          collapse: false
+          sets:
+            aggiungi:
+              display: Aggiungi
+              fields:
+                -
+                  handle: numero
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: numero
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  import: select_dati
+          display: 'Dati sui questionari'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+      -
+        handle: dati-sui-laboratori
+        field:
+          collapse: false
+          sets:
+            aggiungi:
+              display: Aggiungi
+              fields:
+                -
+                  handle: numero
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Titolo
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  import: select_dati
+          display: 'Dati sui laboratori'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+      -
+        handle: dossier-finale
+        field:
+          collapse: false
+          sets:
+            aggiungi:
+              display: Aggiungi
+              fields:
+                -
+                  handle: numero
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Titolo
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  import: select_dati
+          display: 'Dossier finale'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+          validate:
+            - required
+      -
+        handle: data_della_formazione
+        field:
+          mode: single
+          time_enabled: false
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Data della formazione'
+          type: date
+          icon: date
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: template
+        field:
+          type: template
+          display: Template
+          localizable: true
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

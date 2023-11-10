@@ -1,0 +1,29 @@
+title: Dimensioni
+fields:
+  -
+    handle: dimensioni
+    field:
+      options:
+        'null': Nulla
+        w-1: w-1
+        w-2: w-2
+        w-4: w-4
+        w-6: w-6
+        w-10: w-10
+        w-20: w-20
+        w-1/2: w-1/2
+        w-1/3: w-1/3
+        w-2/3: w-2/3
+        w-3/3: w-3/3
+        w-8/12: w-8/12
+        w-full: w-full
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Dimensioni
+      type: select
+      icon: select
+      listable: hidden

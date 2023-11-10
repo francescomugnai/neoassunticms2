@@ -1,0 +1,101 @@
+title: 'Autoformazione (intro e contenuti)'
+data:
+  intro: 'Fusce quam tellus, placerat eu metus ut, viverra aliquet purus. Suspendisse potenti. Nulla non nibh feugiat.'
+  serie:
+    -
+      title: 'Serie 1'
+      video:
+        -
+          testo: 'I fondamentali della Didattica Digitale Integrata'
+          video_ddi: 'https://www.youtube.com/watch?v=lJ8j0dvr1I0&list=PLIHHPpBKmpSln0sQiEiL_rG1rNoUfUibG'
+          type: aggiungi_video
+          enabled: true
+      type: aggiungi_serie
+      enabled: false
+    -
+      title: 'Serie 2'
+      video:
+        -
+          testo: 'La DDI della lingua inglese nel primo ciclo'
+          type: aggiungi_video
+          enabled: true
+          video_ddi: 'https://www.youtube.com/watch?v=zgRjaSpVJlI&t=988s'
+      type: aggiungi_serie
+      enabled: false
+  links:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'In evidenza dalle Reti Indire:'
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: '- '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'http://innovazione.indire.it/avanguardieeducative/'
+                rel: null
+                target: null
+                title: null
+          text: 'Avanguardie educative'
+    -
+      type: paragraph
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: '- '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://biblioteca.indire.it/home'
+                rel: null
+                target: null
+                title: null
+          text: 'Biblioteca dell’Innovazione'
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: '- '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://etwinning.indire.it/'
+                rel: null
+                target: null
+                title: null
+          text: eTwinning
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: '- '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://piccolescuole.indire.it/'
+                rel: null
+                target: null
+                title: null
+          text: 'Piccole Scuole'

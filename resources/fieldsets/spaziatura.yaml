@@ -1,0 +1,58 @@
+title: Spaziatura
+fields:
+  -
+    handle: spaziatura
+    field:
+      options:
+        'null': Nulla
+        py-0: py-0
+        py-1: py-1
+        py-2: py-2
+        py-4: py-4
+        py-6: py-6
+        py-8: py-8
+        py-10: py-10
+        py-20: py-20
+        py-32: py-32
+        p-0: p-0
+        p-1: p-1
+        p-2: p-2
+        p-4: p-4
+        p-6: p-6
+        p-8: p-8
+        p-10: p-10
+        p-12: p-12
+        p-20: p-20
+        p-32: p-32
+        mb-2: mb-2
+        mb-4: mb-4
+        mb-6: mb-6
+        mb-8: mb-8
+        mb-10: mb-10
+        mb-20: mb-20
+        mb-32: mb-32
+        mt-2: mt-2
+        mt-4: mt-4
+        mt-6: mt-6
+        mt-8: mt-8
+        mt-10: mt-10
+        mt-16: mt-16
+        mt-20: mt-20
+        mt-32: mt-32
+        my-2: my-2
+        my-4: my-4
+        my-6: my-6
+        my-8: my-8
+        my-10: my-10
+        my-20: my-20
+        my-32: my-32
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Spaziatura
+      type: select
+      icon: select
+      listable: hidden

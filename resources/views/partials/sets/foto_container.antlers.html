@@ -1,0 +1,56 @@
+{{ if container_foto }}
+      {{ if !caption }}
+
+        <div class="container mx-auto max-w-7xl flex items-center justify-center">
+          {{ container_foto }}
+              {{ if mime_type == 'video/mp4' }}
+                  <video class="
+                  {{ if spaziatura && spaziatura != null }} {{ spaziatura }} {{ /if }}
+                  " width="100%" autoplay loop>
+                    <source src="{{ config:app:url }}{{ url }}" type="video/mp4">
+                  </video>
+              {{ else }}
+                <img class="
+                  {{ if classi }} {{ classi }} {{ value }}  {{ /classi }} {{ /if }}
+                  {{ if spaziatura && spaziatura != null }} {{ spaziatura }} {{ /if }}
+                  {{ if dimensioni && dimensioni != null }} {{ dimensioni }} {{ /if }}
+                  {{ if container_foto_ombra == true }} shadow-2xl {{ /if }} {{ dimensioni }}" 
+                  src="{{ glide:url width="100%" format="webp" quality="70" }}" alt="{{ alt }}">
+
+                  {{# <div class="
+                  {{ if classi }} {{ classi }} {{ value }}  {{ /classi }} {{ /if }}
+                  {{ if spaziatura && spaziatura != null }} {{ spaziatura }} {{ /if }}
+                  {{ if dimensioni && dimensioni != null }} {{ dimensioni }} {{ /if }}
+                  {{ if container_foto_ombra == true }} shadow-2xl {{ /if }} {{ dimensioni }}">
+                    {{ responsive:url }}
+                  </div> #}}
+
+              {{ /if }}
+          {{ /container_foto }}
+        </div>
+
+      {{ else }}
+
+        <div class="container mx-auto max-w-7xl">
+
+          {{ container_foto }}
+          
+            <div class="bg-white {{ if container_foto_ombra == true }} framed-caption {{ /if }} {{ spaziatura }}">
+              {{ if mime_type == 'video/mp4' }}
+                  <video width="100%" autoplay loop>
+                    <source src="{{ config:app:url }}{{ url }}" type="video/mp4">
+                  </video>
+              {{ else }}
+                {{ responsive:url class="{dimensione}" }}
+                {{# <img src="{{ glide:url width="100%" format="webp" quality="70" }}" alt="{{ alt }}"> #}}
+              {{ /if }}
+
+              <div class=" text-2xl bg-gray-800 corsivo  text-pink-300 leading-normal py-6 px-10">
+                {{ caption }}
+              </div>
+
+            </div>
+          {{ /container_foto }}
+        </div>
+      {{ /if }}
+  {{ /if}}

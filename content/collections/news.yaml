@@ -1,0 +1,7 @@
+title: News
+template: news/show
+layout: layout
+revisions: false
+route: 'news-e-approfondimenti/{slug}'
+date: true
+sort_dir: asc

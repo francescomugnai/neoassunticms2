@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}" class="jgc-dark">
+    <head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{ seo_pro:meta }}
+<meta property="og:image:secure_url" content="https://neoassunti.indire.it/2022/ext-images/cover-social.jpg" />
+<link rel="stylesheet" href="{{ config:app:url }}css/tailwind.css">
+{{# <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Petit+Formal+Script&display=swap" rel="stylesheet"> #}}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ config:app:url }}assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ config:app:url }}assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ config:app:url }}assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="{{ config:app:url }}assets/favicons/site.webmanifest">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=titillium-web:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet" />
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://ingestion.webanalytics.italia.it/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '5y044Qa01v']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+<script type="text/javascript" charset="UTF-8" src="https://assets.indire.it/templates/cookies/cookies.js"></script>
+
+</head>
+
+
+    <body class="relative titillium">
+
+           <div x-data="closemenu()"
+            id="burgermenu" class="flex-col justify-between bg-cover bg-bottom w-screen rale bg-gradient-to-t from-emerald-100 to-white" 
+            style="display:none;">
+      
+                      <div class="container mx-auto md:max-w-8xl mt-6 flex items-center justify-end px-6 md:px-0">
+                          <div class="flex space-x-2 items-center justify-center">
+                              <button id="closeButton" x-on:click="closeMenu()" style="opacity: 0;" 
+                              class="text-lg animateRight z-50 font-bold px-1.5 uppercase text-emerald-400  focus:outline-none">
+                                  X
+                              </button>
+                          </div>
+                      </div>
+      
+                      <div id="menuitems" style="opacity: 0;"
+                      class="px-6 flex flex-col space-y-8 justify-center container mx-auto text-left h-full relative z-20">
+      
+                          <a class="text-4xl title-pink rale font-bold" style="z-index: 99;" href="/">Neoassunti a.s. 2023/2024</a>
+                          <ul class="text-black dark:text-white text-2xl font-semibold  rale md:space-x-20 flex flex-col md:flex-row space-y-6 md:space-y-0">
+                            {{ nav:main include_home="true"  }}
+                              <li class="relative menuelement shadow-active flex space-x-2">
+                                {{ if is_current }}
+                                    <img class="w-2" src="{{ config:app:url }}assets/circle-active.svg" alt="cerchio">
+                                {{ elseif segment_1 == slug}}
+                                    <img class="w-2" src="{{ config:app:url }}assets/circle-active.svg" alt="cerchio">
+                                {{ else }}  
+                                    <img class="w-2" src="{{ config:app:url }}assets/circle.svg" alt="cerchio">
+                                {{ /if }}
+                                  <a class="transition  duration-300 ease-in-out relative inline-block text-gray-700 hover:text-emerald-600 {{ if is_current }} traverso2 {{ /if }}" href="{{ config:app:url }}{{ url }}">
+                                      {{ title }} 
+                                  </a>
+                              </li>
+                              {{ /nav:main }}
+                              {{# <li class="flex items-center space-x-2">
+                                <img class="w-2" src="{{ config:app:url }}assets/circle.svg" alt="cerchio">
+                                  <a class="transition  duration-300 ease-in-out relative inline-block text-gray-700 hover:text-emerald-600 " href="{{ config:app:url }}ticket/">
+                                      Assistenza
+                                  </a>
+                              </li> 
+                              <li class="flex items-center space-x-4 list-none">
+                                  <a class="bg-emerald-400 hover:bg-emerald-500 text-white px-3 py-1 rounded uppercase tracking-widest text-lg font-bold" href="https://neoassunti.indire.it/index.php">
+                                    Login
+                                  </a>
+                              </li>  #}}
+                            
+                          </ul>
+                      </div>
+              </div>
+        
+            {{ template_content }}
+
+            
+            <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/EasePack.min.js"></script>
+            <script src="{{ config:app:url }}js/site.js"></script>
+
+
+
+
+            <div id="jgc-panel-header" class="jgc-hidden">
+              <div class="jgc-max-w-3xl jgc-flex jgc-justify-center jgc-mx-auto">
+                <div class="jgc-px-5 jgc-py-3">
+                  <img class="jgc-w-[140px] jgc-m-0 jgc-p-0" src="{{ config:app:url }}assets/loghi/logo_indire_bianco.svg" alt="Logo Indire" />
+                </div>
+              </div>
+            </div>
+      
+            <div id="jgc-panel-footer" class="jgc-hidden">
+              <div class="jgc-max-w-3xl jgc-bg-sky-900 jgc-mx-auto">
+                <div class="jgc-px-5 jgc-py-3 jgc-text-white jgc-text-xs jgc-flex jgc-justify-between jgc-uppercase">
+                  <p>Copyright 2022</p>
+                  <p><a href="https://neoassunti.indire.it/2022/privacy-policy/" target="_blank">Privacy policy</a> </p>
+                </div>
+              </div>
+            </div>
+      
+            <div id="jgc-banner-text" class="hidden">
+              Utilizziamo cookie tecnici per garantire il funzionamento del sito e, previo Tuo consenso, cookie analytics per analizzare il traffico e cookie di terze parti per migliorare e personalizzare la Tua visita. Selezionando Accetta tutti acconsenti all’utilizzo di cookie analytics e di terze parti. Puoi impostare in modo analitico le funzionalità che ti interessano cliccando sul tasto "Personalizza". Se scegli di chiudere il banner utilizzando il pulsante “X” in alto a destra, vengono mantenute le impostazioni predefinite e continui la navigazione solo con cookie tecnici. Per saperne di più puoi consultare la privacy policy.
+            </div>
+      
+
+            <img class="absolute left-0 bottom-0 h-full" src="https://shuffle.dev/gradia-assets/elements/contact/radial.svg" alt="">
+
+    </body>
+</html>

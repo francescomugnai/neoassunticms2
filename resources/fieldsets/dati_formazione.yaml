@@ -1,0 +1,39 @@
+title: 'Dati formazione'
+fields:
+  -
+    handle: blocco_dati_formazioni
+    field:
+      collapse: false
+      sets:
+        utenti_piattaforma:
+          display: 'Utenti della piattaforma'
+          fields:
+            -
+              handle: numero
+              field:
+                input_type: text
+                antlers: false
+                display: Numero
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+            -
+              handle: testo
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: Testo
+                type: markdown
+                icon: markdown
+                listable: hidden
+                instructions_position: above
+      display: 'Blocco dati formazioni'
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above

@@ -1,0 +1,69 @@
+sections:
+  main:
+    display: Introduzione
+    fields:
+      -
+        handle: testo_intro
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Testo
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+  suggerimenti_tecnici:
+    display: 'Suggerimenti tecnici'
+    fields:
+      -
+        handle: testo_tecnici
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Testo
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+  assistenza:
+    display: Assistenza
+    fields:
+      -
+        handle: testo_assistenza
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Testo
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+  faq:
+    display: FAQ
+    fields:
+      -
+        handle: testo_faq
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Testo
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above

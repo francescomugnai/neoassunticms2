@@ -1,0 +1,49 @@
+title: FAQ
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          type: markdown
+          localizable: true
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: categoria
+        field:
+          options:
+            iscrizione: 'Iscrizione e accesso'
+            tutor: 'Tutor accogliente'
+            obblighi: Obblighi
+            normativa: Normativa
+            scadenze: Scadenze
+          multiple: false
+          max_items: 1
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Categoria
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above

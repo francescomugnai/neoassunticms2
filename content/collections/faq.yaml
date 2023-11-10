@@ -1,0 +1,6 @@
+title: FAQ
+template: faq/show
+layout: layout
+revisions: false
+route: 'faq/{slug}'
+sort_dir: asc

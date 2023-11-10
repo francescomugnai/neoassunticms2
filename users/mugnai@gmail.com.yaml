@@ -1,0 +1,34 @@
+name: 'Francesco Mugnai'
+super: true
+id: 0c59e488-7bef-45d6-b68d-b821744edb07
+password_hash: $2y$10$bGA26T9PR0QPcA6ZUVdI8udf7k6Ppn6GIZnEPE1Dc8AY6FR6RxT6W
+preferences:
+  collections:
+    faq:
+      columns:
+        - title
+        - slug
+        - categoria
+    toolkit:
+      columns:
+        - categoria
+        - title
+        - slug
+        - file
+      per_page: 500
+    news:
+      columns:
+        - categoria
+        - title
+        - slug
+        - date
+        - data_estesa
+      after_save: continue_editing
+    dati:
+      after_save: continue_editing
+      columns:
+        - title
+        - slug
+        - data_della_formazione
+    pages:
+      after_save: continue_editing

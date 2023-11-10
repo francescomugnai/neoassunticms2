@@ -1,0 +1,24 @@
+{{ partial:partials/headerwhiteminimal }}
+{{ partial:partials/herointerna :sectiontitle="title" :titolohero="titolo_hero" :testohero="testo_hero" }}
+
+
+<div class="container mx-auto mb-12 rale space-y-4 relative z-10">
+  {{ collection:news sort="date:desc" }}
+    <div class="bg-white framed p-10 rounded-xl relative overflow-y-hidden">
+      <div class="md:flex  md:space-x-4 items-center w-full">
+        <span class="text-sm font-bold  bg-purple-100 px-4 py-0.5  rounded-full ring-1 uppercase ring-purple-300 text-slate-600">
+          {{ categoria }}
+        </span>
+        <a href="{{ permalink }}" class="text-xl font-light flex mt-2 md:mt-0">
+          {{ title }}
+        </a>
+      </div>
+      <p class="absolute bottom-0 right-6 text-4xl md:text-6xl opacity-10 text-fuchsia-700 font-bold transform translate-y-2 rale">
+        {{ data_estesa  }}
+      </p>
+    </div>
+  {{ /collection:news }}
+</div>
+
+
+{{ partial:partials/footer class="mt-24" }}

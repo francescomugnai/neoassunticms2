@@ -1,0 +1,18 @@
+title: 'Link del footer'
+data:
+  links:
+    -
+      label: Credits
+      link: credits
+      type: aggiungi
+      enabled: true
+    -
+      label: 'Privacy policy'
+      link: privacy-policy
+      type: aggiungi
+      enabled: true
+    -
+      label: 'Cookie policy'
+      type: aggiungi
+      enabled: true
+      link: 'https://www.indire.it/privacy/#cookies'

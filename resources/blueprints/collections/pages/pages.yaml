@@ -1,0 +1,299 @@
+title: Pages
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: titolo_hero
+        field:
+          input_type: text
+          antlers: false
+          display: 'Titolo hero'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          unless:
+            id: 'equals home'
+      -
+        handle: testo_hero
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'Testo hero'
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+          unless:
+            id: 'equals home'
+      -
+        import: editor
+      -
+        handle: anni_formazioni
+        field:
+          collapse: false
+          sets:
+            aggiungi:
+              display: Aggiungi
+              fields:
+                -
+                  handle: titolo
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Titolo
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: links
+                  field:
+                    collapse: false
+                    sets:
+                      aggiungi_link:
+                        display: 'Aggiungi link'
+                        fields:
+                          -
+                            handle: label
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Label
+                              type: text
+                              icon: text
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: link
+                            field:
+                              display: Link
+                              type: link
+                              icon: link
+                              listable: hidden
+                              instructions_position: above
+                    display: Links
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: editor_interno
+                  field:
+                    restrict: false
+                    automatic_line_breaks: true
+                    automatic_links: false
+                    escape_markup: false
+                    smartypants: false
+                    antlers: false
+                    display: 'Editor interno'
+                    type: markdown
+                    icon: markdown
+                    listable: hidden
+                    instructions_position: above
+          display: 'Anni formazioni'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          if:
+            id: 'equals 2614ac3d-7b80-44b2-ac71-6f0e8ae2a15e'
+      -
+        handle: intro_home
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: true
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          display: 'Intro home'
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          if:
+            id: 'equals home'
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: template
+        field:
+          hide_partials: true
+          display: Template
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+  titoli:
+    display: Titoli
+    fields:
+      -
+        handle: box_news
+        field:
+          fields:
+            -
+              handle: titolo_news
+              field:
+                input_type: text
+                antlers: false
+                display: Titolo
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+            -
+              handle: sottotitolo_news
+              field:
+                input_type: text
+                antlers: false
+                display: Sottotitolo
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+          mode: stacked
+          max_rows: 1
+          add_row: Aggiungi
+          reorderable: true
+          display: 'Box news'
+          type: grid
+          icon: grid
+          listable: hidden
+          instructions_position: above
+          if:
+            id: 'equals home'
+      -
+        handle: box_normativa
+        field:
+          fields:
+            -
+              handle: titolo_normativa
+              field:
+                input_type: text
+                antlers: false
+                display: Titolo
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+            -
+              handle: sottotitolo_normativa
+              field:
+                input_type: text
+                antlers: false
+                display: Sottotitolo
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+          mode: stacked
+          max_rows: 1
+          reorderable: true
+          display: 'Box normativa'
+          type: grid
+          icon: grid
+          listable: hidden
+          instructions_position: above
+          if:
+            id: 'equals home'
+      -
+        handle: box_centrali
+        field:
+          fields:
+            -
+              handle: box_normativa
+              field:
+                input_type: text
+                antlers: false
+                display: 'Box normativa'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+            -
+              handle: box_autoformazione
+              field:
+                input_type: text
+                antlers: false
+                display: 'Box autoformazione'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+            -
+              handle: box_dati_della_formazione
+              field:
+                input_type: text
+                antlers: false
+                display: 'Box dati della formazione'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+          mode: stacked
+          max_rows: 1
+          reorderable: true
+          display: 'Box centrali'
+          type: grid
+          icon: grid
+          listable: hidden
+          instructions_position: above
+          if:
+            id: 'equals home'
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

@@ -1,0 +1,28 @@
+
+
+
+
+<div id="blocco-{{ categoria }}" class="pt-4 md:pt-0">
+  {{ if first }}
+    <h2 class="text-3xl font-bold rale title-pink mb-6 {{ categoria }}">
+      {{ categoria:label }}
+    </h2>
+  {{ /if }}
+
+<div class=" ">
+  <dl class="border-t">
+    <div class="pt-6 pb-8 md:grid md:grid-cols-12 md:gap-8 ">
+      <dt class="text-base text-gray-600 md:col-span-5 font-semibold ">
+        {{ title }} 
+      </dt>
+      <dd class="mt-2 md:mt-0 md:col-span-7">
+        <div class="text-base text-gray-500">
+          {{ content }}
+        </div>
+      </dd>
+    </div>
+  </dl>
+</div>
+</div>
+
+

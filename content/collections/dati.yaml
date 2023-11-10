@@ -1,0 +1,9 @@
+title: Dati
+template: dati/show
+layout: layout
+revisions: false
+route: 'dati/{slug}'
+sort_dir: asc
+structure:
+  root: false
+  max_depth: 1

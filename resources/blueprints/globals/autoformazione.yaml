@@ -1,0 +1,106 @@
+sections:
+  main:
+    display: Serie
+    fields:
+      -
+        handle: intro
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Intro
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+      -
+        handle: serie
+        field:
+          collapse: false
+          sets:
+            aggiungi_serie:
+              display: 'Aggiungi serie'
+              fields:
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Title
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: video
+                  field:
+                    collapse: false
+                    sets:
+                      aggiungi_video:
+                        display: 'Aggiungi video'
+                        fields:
+                          -
+                            handle: testo
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Testo
+                              type: text
+                              icon: text
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: video_ddi
+                            field:
+                              display: 'Video DDI'
+                              type: video
+                              icon: video
+                              listable: hidden
+                              instructions_position: above
+                    display: Video
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+          display: Serie
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+  links:
+    display: Links
+    fields:
+      -
+        handle: links
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          display: Links
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above

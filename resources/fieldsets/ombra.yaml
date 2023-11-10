@@ -1,0 +1,10 @@
+title: Ombra
+fields:
+  -
+    handle: ombra
+    field:
+      default: false
+      display: Ombra
+      type: toggle
+      icon: toggle
+      listable: hidden

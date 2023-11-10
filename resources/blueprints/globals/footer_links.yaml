@@ -1,0 +1,35 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: links
+        field:
+          collapse: false
+          sets:
+            aggiungi:
+              display: Aggiungi
+              fields:
+                -
+                  handle: label
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Label
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: link
+                  field:
+                    display: Link
+                    type: link
+                    icon: link
+                    listable: hidden
+                    instructions_position: above
+          display: Links
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above

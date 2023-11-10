@@ -1,0 +1,32 @@
+title: 'Select dati'
+fields:
+  -
+    handle: select
+    field:
+      options:
+        docenti-iscritti: 'Docenti iscritti nell''ambiente'
+        tutor-iscritti: 'Tutor iscritti nell''ambiente'
+        numero-esperienze: 'Il numero di esperienze inserite dai docenti'
+        bilanci-iniziali-lavorazione: 'Bilanci iniziali in lavorazione'
+        bilanci-iniziali-inviati: 'Bilanci iniziali inviati'
+        laboratori-formativi-documentati: 'Esperienze di tipo LABORATORIO inserite'
+        bilanci-finali-e-bisogni-formativi-futuri-in-lavorazione: 'Bilanci finali e bisogni formativi futuri in lavorazione'
+        bilanci-finali-e-bisogni-formativi-futuri-inviati-definitivamente: 'Bilanci finali e bisogni formativi futuri inviati'
+        questionari-in-lavorazione: 'Questionari in lavorazione'
+        questionari-inviati: 'Questionari inviati'
+        questionari-tutor-in-lavorazione: 'Questionari tutor in lavorazione'
+        questionari-tutor-inviati: 'Questionari tutor inviati'
+        esperienze-di-tipo-visita-inserite: 'Esperienze di tipo VISITA inserite'
+        dossier-finali: 'Dossier finali'
+      multiple: false
+      max_items: 1
+      clearable: true
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Select
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
