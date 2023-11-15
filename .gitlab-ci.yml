@@ -26,11 +26,10 @@ deploy-test test:
         - sviluppo
 
 genera-sito:
-    stage: genera-sito
+    stage: deploy test
     script:
         - cd /opt/neoassunti2024-cms
         - php please ssg:generate --workers=4
-        - chmod -R 775 storage/app/static
     tags:
         - neoassunti2024-cms-sviluppo
     only:
