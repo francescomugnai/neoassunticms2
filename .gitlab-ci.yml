@@ -30,7 +30,7 @@ genera-sito:
     script:
         - cd /opt/neoassunti2024-cms
         - php please ssg:generate --workers=4
-        - chmod -R 775 storage/app
+        - chmod -R 775 storage/app/static
     tags:
         - neoassunti2024-cms-sviluppo
     only:
