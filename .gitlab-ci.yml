@@ -23,3 +23,13 @@ deploy-test test:
         - neoassunti2024-cms-sviluppo
     only:
         - sviluppo
+
+genera-sito:
+    script:
+        - cd /opt/neoassunti2024-cms
+        - php please ssg:generate --workers=4
+    tags:
+        - neoassunti2024-cms-sviluppo
+    only:
+        - sviluppo
+    when: manual
