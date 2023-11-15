@@ -11,7 +11,7 @@ deploy-test test:
         - composer install --no-interaction --prefer-dist --optimize-autoloader
         - cd /opt/neoassunti2024-cms
         # - php artisan migrate:refresh --force
-        - php artisan migrate --force
+        # - php artisan migrate --force
         # - php artisan db:seed --force
         # - php artisan db:seed --class=StandardsTableSeeder
         # - php artisan db:seed --class=UsersTableSeeder
