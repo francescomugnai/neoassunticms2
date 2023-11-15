@@ -1,0 +1,25 @@
+stages:
+    - deploy test
+
+deploy-test test:
+    stage: deploy test
+    script:
+        - echo "lanciata sincronizzazione..."
+        - rsync -av --exclude 'storage' --exclude 'bootstrap/cache' --exclude '.git*' ./ /opt/neoassunti2024-cms/
+        - echo "finita sincronizzazione"
+        - echo "pulizia cache"
+        - composer install --no-interaction --prefer-dist --optimize-autoloader
+        - cd /opt/neoassunti2024
+        # - php artisan migrate:refresh --force
+        - php artisan migrate --force
+        # - php artisan db:seed --force
+        # - php artisan db:seed --class=StandardsTableSeeder
+        # - php artisan db:seed --class=UsersTableSeeder
+        - php artisan config:clear
+        - php artisan cache:clear
+        - php artisan event:clear
+
+    tags:
+        - neoassunti2024-cms-sviluppo
+    only:
+        - sviluppo
