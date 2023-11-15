@@ -39,7 +39,7 @@ genera-sito:
         - git add . 
         - git commit -m "update sito"
         - git push -uf origin sviluppo
-        - cd ..
+        - cd /opt/neoassunti2024-cms
         - rm -Rf static
         - sudo chown -R apache:apache storage
 
