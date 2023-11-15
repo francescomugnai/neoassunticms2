@@ -9,7 +9,7 @@ deploy-test test:
         - echo "finita sincronizzazione"
         - echo "pulizia cache"
         - composer install --no-interaction --prefer-dist --optimize-autoloader
-        - cd /opt/neoassunti2024
+        - cd /opt/neoassunti2024-cms
         # - php artisan migrate:refresh --force
         - php artisan migrate --force
         # - php artisan db:seed --force
