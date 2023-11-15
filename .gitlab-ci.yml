@@ -40,7 +40,7 @@ genera-sito:
         - git commit -m "update sito $CI_COMMIT_TIMESTAMP"
         - git push -uf origin sviluppo
         - cd /opt/neoassunti2024-cms
-        - rm -Rf static
+        - rm -Rf storage/app/static
         - sudo chown -R apache:apache storage
 
     tags:
