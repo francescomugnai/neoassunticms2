@@ -37,7 +37,6 @@ genera-sito:
         - git remote add origin https://upload_user:glpat-ZKAJ_fJu2or3V5Hmr2vF@gitlab.lombroso.indire.it/neoassunti/neoassunti2024/neoassunti-public.git
         - git fetch
         - git branch --track sviluppo origin/sviluppo
-        - git reset HEAD
         - git add . 
         - git commit
         - git push -uf origin sviluppo
