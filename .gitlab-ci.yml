@@ -7,7 +7,9 @@ deploy-test test:
     stage: deploy test
     script:
         - echo "lanciata sincronizzazione..."
+        - sudo chown -R gitlab-runner:gitlab-runner /opt/neoassunti2024-cms/content
         - rsync -av --exclude 'storage' --exclude 'bootstrap/cache' --exclude '.git*' ./ /opt/neoassunti2024-cms/
+        - sudo chown -R apache:apache /opt/neoassunti2024-cms/content
         - echo "finita sincronizzazione"
         - echo "pulizia cache"
         - composer install --no-interaction --prefer-dist --optimize-autoloader
