@@ -41,7 +41,7 @@ genera-sito:
         - git add .
         - git commit -m "update sito $CI_COMMIT_TIMESTAMP"
         - git fetch origin sviluppo
-        - git pull origin sviluppo
+        - git pull --rebase origin sviluppo
         #- git reset --hard origin/sviluppo
         - git push -u origin sviluppo
         - cd /opt/neoassunti2024-cms
