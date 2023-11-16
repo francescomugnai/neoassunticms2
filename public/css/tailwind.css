@@ -1137,16 +1137,12 @@ section.header-toolkit {
   max-width: max-content;
 }
 
-.max-w-7xl {
-  max-width: 80rem;
-}
-
-.max-w-xl {
-  max-width: 36rem;
-}
-
 .max-w-lg {
   max-width: 32rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
 }
 
 .flex-1 {
@@ -1458,11 +1454,6 @@ section.header-toolkit {
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
 
-.border-emerald-200 {
-  --tw-border-opacity: 1;
-  border-color: rgba(167, 243, 208, var(--tw-border-opacity));
-}
-
 .border-purple-100 {
   --tw-border-opacity: 1;
   border-color: rgba(243, 232, 255, var(--tw-border-opacity));
@@ -1501,16 +1492,6 @@ section.header-toolkit {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
-}
-
-.bg-emerald-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
-}
-
-.bg-emerald-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(236, 253, 245, var(--tw-bg-opacity));
 }
 
 .bg-gray-700 {
@@ -1704,9 +1685,9 @@ section.header-toolkit {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-emerald-600 {
-  --tw-gradient-from: #059669;
-  --tw-gradient-to: rgba(5, 150, 105, 0);
+.from-purple-600 {
+  --tw-gradient-from: #9333ea;
+  --tw-gradient-to: rgba(147, 51, 234, 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -2197,9 +2178,9 @@ section.header-toolkit {
   color: rgba(162, 28, 175, var(--tw-text-opacity));
 }
 
-.text-emerald-500 {
+.text-purple-500 {
   --tw-text-opacity: 1;
-  color: rgba(16, 185, 129, var(--tw-text-opacity));
+  color: rgba(168, 85, 247, var(--tw-text-opacity));
 }
 
 .text-blue-300 {
@@ -2350,11 +2331,6 @@ section.header-toolkit {
 .ring-purple-300 {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(216, 180, 254, var(--tw-ring-opacity));
-}
-
-.ring-emerald-300 {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgba(110, 231, 183, var(--tw-ring-opacity));
 }
 
 .ring-blue-300 {
@@ -2512,9 +2488,9 @@ section.header-toolkit {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:border-emerald-300 {
+.group:hover .group-hover\:border-purple-300 {
   --tw-border-opacity: 1;
-  border-color: rgba(110, 231, 183, var(--tw-border-opacity));
+  border-color: rgba(216, 180, 254, var(--tw-border-opacity));
 }
 
 .group:hover .group-hover\:text-fuchsia-700 {
