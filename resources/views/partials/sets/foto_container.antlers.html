@@ -7,7 +7,7 @@
                   <video class="
                   {{ if spaziatura && spaziatura != null }} {{ spaziatura }} {{ /if }}
                   " width="100%" autoplay loop>
-                    <source src="{{ config:app:url }}{{ url }}" type="video/mp4">
+                    <source src="{{ url }}" type="video/mp4">
                   </video>
               {{ else }}
                 <img class="
@@ -38,7 +38,7 @@
             <div class="bg-white {{ if container_foto_ombra == true }} framed-caption {{ /if }} {{ spaziatura }}">
               {{ if mime_type == 'video/mp4' }}
                   <video width="100%" autoplay loop>
-                    <source src="{{ config:app:url }}{{ url }}" type="video/mp4">
+                    <source src="{{ url }}" type="video/mp4">
                   </video>
               {{ else }}
                 {{ responsive:url class="{dimensione}" }}
