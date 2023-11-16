@@ -35,6 +35,7 @@ genera-sito:
         - git init -b sviluppo
         - git config --global --add safe.directory /opt/neoassunti2024-cms/storage/app/static
         - git remote add origin https://upload_user:glpat-ZKAJ_fJu2or3V5Hmr2vF@gitlab.lombroso.indire.it/neoassunti/neoassunti2024/neoassunti-public.git
+        - git add .
         - git commit -m "update sito $CI_COMMIT_TIMESTAMP"
         - git fetch origin sviluppo
         - git reset --hard FETCH_HEAD
