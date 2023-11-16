@@ -1,6 +1,7 @@
 stages:
     - deploy test
     - genera-sito
+    - composer-update
 
 deploy-test test:
     stage: deploy test
@@ -53,8 +54,9 @@ genera-sito:
 composer-update:
     stage: composer-update
     script:
-        - echo "Parte l'update"
+        - echo "Parte update"
         - composer install --no-interaction --prefer-dist --optimize-autoloader
+
     tags:
         - neoassunti2024-cms-sviluppo
     only:
