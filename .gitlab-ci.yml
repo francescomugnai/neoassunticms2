@@ -39,7 +39,7 @@ genera-sito:
         - git remote add origin https://upload_user:glpat-ZKAJ_fJu2or3V5Hmr2vF@gitlab.lombroso.indire.it/neoassunti/neoassunti2024/neoassunti-public.git
         - git add .
         - git commit -m "update sito $CI_COMMIT_TIMESTAMP"
-        - git pull origin -t sviluppo --allow-unrelated-histories --no-rebase --no-edit
+        - git pull origin -X ours -t sviluppo --allow-unrelated-histories --no-rebase --no-edit
         - git fetch origin sviluppo
         - git push origin sviluppo
         - cd /opt/neoassunti2024-cms
