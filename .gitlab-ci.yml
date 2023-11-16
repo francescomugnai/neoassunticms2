@@ -38,7 +38,7 @@ genera-sito:
         - git fetch
         - git add . 
         - git commit -m "update sito $CI_COMMIT_TIMESTAMP"
-        - git push -uf origin sviluppo
+        - git push -u origin sviluppo
         - cd /opt/neoassunti2024-cms
         - rm -Rf storage/app/static
         - sudo chown -R apache:apache storage
