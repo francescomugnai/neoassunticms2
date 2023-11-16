@@ -43,6 +43,7 @@ genera-sito:
         #- git fetch origin sviluppo
         #- git reset --hard origin/sviluppo
         # - git merge -X ours
+        - git config pull.rebase false
         - git pull -X ours origin sviluppo
         - git push origin sviluppo
         - cd /opt/neoassunti2024-cms
