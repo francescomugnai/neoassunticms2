@@ -24,11 +24,11 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
     ];
 
-    public function __construct()
+    public function __construct(\Illuminate\Contracts\Foundation\Application $app, \Illuminate\Routing\Router $router)
     {
-        $this->middleware = array_merge($this->middleware, [
-            $this->chooseTrustProxiesMiddleware(),
-        ]);
+        parent::__construct($app, $router);
+        // Aggiungi dinamicamente il middleware TrustProxies o TrustProxiesStatic
+        $this->pushMiddleware($this->chooseTrustProxiesMiddleware());
     }
     
     protected function chooseTrustProxiesMiddleware()
@@ -39,7 +39,7 @@ class Kernel extends HttpKernel
     
         return \App\Http\Middleware\TrustProxies::class;
     }
-    
+
     /**
      * The application's route middleware groups.
      *
