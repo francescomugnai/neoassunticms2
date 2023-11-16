@@ -5,27 +5,25 @@
     "type": "project",
     "require": {
         "php": "^8.0",
-        "aerni/social-links": "^2.3",
-        "fideloper/proxy": "^4.2",
-        "fruitcake/laravel-cors": "^2.0.5",
+        "aerni/social-links": "^3.1",
+        "fruitcake/laravel-cors": "dev-develop",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^9.0",
-        "laravel/tinker": "^2.7",
-        "spatie/fork": "^1.1",
-        "spatie/statamic-responsive-images": "^2.8.2",
-        "statamic/cms": "3.3.*",
-        "laravel/sanctum": "^2.14",
-        "statamic/seo-pro": "^3.1.0",
-        "statamic/ssg": "1.2.0"
+        "laravel/framework": "^10.10",
+        "laravel/sanctum": "^3.2",
+        "laravel/tinker": "^2.8",
+        "spatie/fork": "^1.2",
+        "spatie/statamic-responsive-images": "^4.1",
+        "statamic/cms": "^4.0",
+        "statamic/seo-pro": "^5.2",
+        "statamic/ssg": "^2.2"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.6",
         "fakerphp/faker": "^1.9.1",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^6.1",
-        "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0",
-        "laravel/sail": "^1.13"
+        "nunomaduro/collision": "^7.0",
+        "phpunit/phpunit": "^10.1",
+        "spatie/laravel-ignition": "^2.0",
+        "laravel/sail": "^1.18"
     },
     "config": {
         "optimize-autoloader": true,

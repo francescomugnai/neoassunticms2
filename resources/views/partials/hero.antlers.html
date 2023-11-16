@@ -14,7 +14,7 @@
           <div class="mb-8 font-heading max-w-max uppercase font-semibold text-xs tracking-wider text-indigo-900 bg-gradient-blue2 rounded-full">
             Ultimo aggiornamento:
             {{ collection:news limit="1" sort="date:desc" }}
-            {{ date format="d M Y" format_localized="%d/%m/%Y"  }}
+            {{ date format="d M Y" }}
           {{ /collection:news }}
           </div>
           <h1 class="mb-6 font-heading text-7xl md:text-10xl xl:text-7xl bg-gradient-to-r from-slate-900 to-purple-800 bg-clip-text text-transparent  font-bold">
@@ -62,7 +62,7 @@
                     <li class="inline-flex text-sm text-gray-500 font-medium">Ultimo aggiornamento: </li>
                     <li class="inline-flex text-sm text-gray-500 font-medium">
                       {{ collection:news limit="1" sort="date:desc" }}
-                        {{ date format="d M Y" format_localized="%d/%m/%Y"  }}
+                        {{ date format="d M Y"   }}
                       {{ /collection:news }}
                     </li>
                   </ul>
