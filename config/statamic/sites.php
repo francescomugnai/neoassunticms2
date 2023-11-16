@@ -18,7 +18,7 @@ return [
         'default' => [
             'name' => config('app.name'),
             'locale' => 'en_US',
-            'url' =>  config('app.url'),
+            'url' =>  "https://neoassunti-cms.lombroso.indire.it/",
             'url2' => 'https://neoassunti2023.test/',
         ],
 
