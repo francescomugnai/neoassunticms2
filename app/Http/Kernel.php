@@ -15,12 +15,23 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         \App\Http\Middleware\TrustProxies::class,
+        \App\Http\Middleware\TrustProxiesStatic::class,
+
         \Fruitcake\Cors\HandleCors::class,
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
     ];
+
+    protected function chooseTrustProxiesMiddleware()
+    {
+        if (env('USE_STATIC_TRUST_PROXIES')) {
+            return \App\Http\Middleware\TrustProxiesStatic::class;
+        }
+
+        return \App\Http\Middleware\TrustProxies::class;
+    }
 
     /**
      * The application's route middleware groups.

@@ -28,9 +28,11 @@ deploy-test test:
 
 genera-sito:
     stage: genera-sito
+    variables:
+        USE_STATIC_TRUST_PROXIES: "true"
     script:
         - cd /opt/neoassunti2024-cms
-        - php please ssg:generate
+        - php please ssg:generate --workers=4
         - cd storage/app/static
         - rm -Rf .git
         - git init -b sviluppo
