@@ -1378,9 +1378,9 @@ section.header-toolkit {
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 
-.divide-emerald-300 > :not([hidden]) ~ :not([hidden]) {
+.divide-purple-300 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
-  border-color: rgba(110, 231, 183, var(--tw-divide-opacity));
+  border-color: rgba(216, 180, 254, var(--tw-divide-opacity));
 }
 
 .divide-purple-200 > :not([hidden]) ~ :not([hidden]) {
@@ -1641,10 +1641,6 @@ section.header-toolkit {
   --tw-bg-opacity: 0.8;
 }
 
-.bg-opacity-20 {
-  --tw-bg-opacity: 0.2;
-}
-
 .bg-opacity-40 {
   --tw-bg-opacity: 0.4;
 }
@@ -1679,9 +1675,9 @@ section.header-toolkit {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-emerald-800 {
-  --tw-gradient-from: #065f46;
-  --tw-gradient-to: rgba(6, 95, 70, 0);
+.from-purple-800 {
+  --tw-gradient-from: #6b21a8;
+  --tw-gradient-to: rgba(107, 33, 168, 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -1729,10 +1725,6 @@ section.header-toolkit {
 
 .to-white {
   --tw-gradient-to: #fff;
-}
-
-.to-emerald-800 {
-  --tw-gradient-to: #065f46;
 }
 
 .to-green-800 {
@@ -1960,6 +1952,10 @@ section.header-toolkit {
   padding-bottom: 5rem;
 }
 
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2161,11 +2157,6 @@ section.header-toolkit {
 .text-white {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.text-emerald-600 {
-  --tw-text-opacity: 1;
-  color: rgba(5, 150, 105, var(--tw-text-opacity));
 }
 
 .text-gray-600 {
@@ -2500,6 +2491,11 @@ section.header-toolkit {
 
 @media (color-index: 48) {
 
+  .dark\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  }
+
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
@@ -2517,6 +2513,11 @@ section.header-toolkit {
 }
 
 @media (color: 48842621) {
+
+  .dark\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  }
 
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
@@ -2536,6 +2537,11 @@ section.header-toolkit {
 
 @media (color-index: 48) {
 
+  .dark\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  }
+
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
@@ -2554,6 +2560,11 @@ section.header-toolkit {
 
 @media (color: 48842621) {
 
+  .dark\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  }
+
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
@@ -2571,6 +2582,11 @@ section.header-toolkit {
 }
 
 @media (prefers-color-scheme: dark) {
+
+  .dark\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  }
 
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;

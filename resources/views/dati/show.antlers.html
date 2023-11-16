@@ -2,7 +2,7 @@
 
 <div class="container mx-auto rale tracking-tighter mt-12">
   <div class="flex justify-start md:max-w-3xl px-4 md:px-0">
-    <h1 class="text-4xl w-full bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent ">
+    <h1 class="text-4xl w-full bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent ">
       <span class="font-bold">Dati riguardanti l'ambiente neoassunti</span> <br> 
       {{ title }}
     </h1>
@@ -12,21 +12,21 @@
 
 
 
-<div class="container mx-auto  gap-6 rale tracking-tighter mt-6 rounded-xl relative  framed p-10">
+<div class="container mx-auto  gap-6 rale tracking-tighter mt-6 rounded-xl  framed p-10 z-10 relative">
 
 
-<section class="inline-block mb-10 w-full">
+<section class="inline-block mb-10 w-full border-b pb-8">
   <div class="flex items-center relative">
-    <h3 class="text-4xl corsivo title-pink inline-block w-full con-rettangolo relative text-center md:text-left">
+    <h3 class="text-4xl  inline-block w-full con-rettangolo relative text-center md:text-left">
       Utenti della piattaforma
     </h3>
   </div>
 
   <div class="grid md:grid-cols-2 md:gap-6 relative z-10 ">
-    <div class="md:p-6 items-center md:grid md:grid-cols-2 md:divide-x divide-emerald-300">
+    <div class="md:p-6 items-center md:grid md:grid-cols-2 md:divide-x divide-purple-300">
       
       <div class="flex items-center justify-center">
-        <h4 class="corsivo text-6xl text-emerald-600">
+        <h4 class=" text-6xl text-purple-600">
           {{ utenti_piattaforma }}
             {{ select }}
               {{ if select == 'docenti-iscritti' }}
@@ -38,16 +38,16 @@
       </div>
       <div class="flex items-center justify-center">
         <p class="text-2xl">
-          <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">Docenti</strong> iscritti
+          <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">Docenti</strong> iscritti
         </p>
       </div>
     </div>
     
 
 
-    <div class="md:p-6 items-center md:grid md:grid-cols-2 md:divide-x divide-emerald-300">
+    <div class="md:p-6 items-center md:grid md:grid-cols-2 md:divide-x divide-purple-300">
       <div class="flex items-center justify-center">
-        <h4 class="corsivo text-6xl text-emerald-600">
+        <h4 class=" text-6xl text-purple-600">
           {{ utenti_piattaforma }}
             {{ select }}
               {{ if select == 'tutor-iscritti' }}
@@ -60,7 +60,7 @@
       </div>
       <div class="flex items-center justify-center">
         <p class="text-2xl">
-          <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">Tutor</strong> associati 
+          <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">Tutor</strong> associati 
         </p>
      </div>
     </div>
@@ -69,12 +69,9 @@
 
 
 
-
-
-
-<section class="inline-block mb-20">
+<section class="inline-block mb-20 border-b pb-8">
   <div class="flex items-center">
-    <h3 class="text-4xl corsivo title-emerald inline-block w-full con-rettangolo relative text-center md:text-left">
+    <h3 class="text-4xl  title-purple inline-block w-full con-rettangolo relative text-center md:text-left">
       Dati sui bilanci
     </h3>
   </div>
@@ -85,13 +82,13 @@
   {{ if select == 'numero-esperienze' }}
       <div class="p-6 items-center md:grid grid-cols-6 gap-6 relative z-10  bg-opacity-80">
         <div class="flex items-center justify-center  col-span-1">
-          <h4 class="corsivo text-6xl text-emerald-600">
+          <h4 class=" text-6xl text-purple-600">
             {{ numero }}
           </h4>
         </div>
         <div class="flex items-center col-span-5">
           <p class="text-xl text-left pl-3 text-gray-600">
-            Il numero di  <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">esperienze</strong> inserite dai docenti nell'ambiente neoassunti nella sezione "Curriculum formativo"
+            Il numero di  <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">esperienze</strong> inserite dai docenti nell'ambiente neoassunti nella sezione "Curriculum formativo"
           </p>
         </div>
       </div>
@@ -107,13 +104,13 @@
   
     <div class="p-6 items-center md:grid grid-cols-6 gap-6 ">
       <div class="flex items-center justify-center  col-span-1">
-        <h4 class="corsivo text-6xl text-emerald-600">
+        <h4 class=" text-6xl text-purple-600">
           {{ numero }}
         </h4>
       </div>
       <div class="flex items-center col-span-5">
         <p class="text-xl md:text-left pl-3 text-center">
-          I bilanci iniziali in  <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">lavorazione</strong> nell'ambiente 
+          I bilanci iniziali in  <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">lavorazione</strong> nell'ambiente 
         </p>
       </div>
     </div>
@@ -129,14 +126,14 @@
   {{ if select == 'bilanci-iniziali-inviati' }}
   <div class="p-6 items-center md:grid grid-cols-6 gap-6 ">
     <div class="flex items-center justify-center  col-span-1">
-        <h4 class="corsivo text-6xl text-emerald-600">
+        <h4 class=" text-6xl text-purple-600">
           {{ numero }}
         </h4>
       </div>
 
       <div class="flex items-center col-span-5">
         <p class="text-xl md:text-left pl-3 text-center">
-          I bilanci iniziali  <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">inviati</strong> definitivamente
+          I bilanci iniziali  <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">inviati</strong> definitivamente
         </p>
       </div>
     </div>
@@ -150,14 +147,14 @@
   {{ if select == 'bilanci-finali-e-bisogni-formativi-futuri-in-lavorazione' }}
   <div class="p-6 items-center md:grid grid-cols-6 gap-6 ">
     <div class="flex items-center justify-center  col-span-1">
-        <h4 class="corsivo text-6xl text-emerald-600">
+        <h4 class=" text-6xl text-purple-600">
           {{ numero }}
         </h4>
       </div>
 
       <div class="flex items-center col-span-5">
         <p class="text-xl md:text-left pl-3 text-center">
-          I bilanci finali e bisogni formativi futuri in  <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">lavorazione</strong>
+          I bilanci finali e bisogni formativi futuri in  <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">lavorazione</strong>
         </p>
       </div>
     </div>
@@ -171,14 +168,14 @@
   {{ if select == 'bilanci-finali-e-bisogni-formativi-futuri-inviati-definitivamente' }}
   <div class="p-6 items-center md:grid grid-cols-6 gap-6 ">
     <div class="flex items-center justify-center  col-span-1">
-        <h4 class="corsivo text-6xl text-emerald-600">
+        <h4 class=" text-6xl text-purple-600">
           {{ numero }}
         </h4>
       </div>
 
       <div class="flex items-center col-span-5">
         <p class="text-xl md:text-left pl-3 text-center">
-          I bilanci finali e bisogni formativi futuri  <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">inviati</strong> definitivamente
+          I bilanci finali e bisogni formativi futuri  <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">inviati</strong> definitivamente
         </p>
       </div>
     </div>
@@ -190,12 +187,9 @@
 
 
 
-
-
-
-<section class="inline-block mb-20 ">
+<section class="inline-block mb-20border-b pb-8">
   <div class="flex items-center">
-    <h3 class="text-4xl corsivo title-pink inline-block w-full con-rettangolo relative text-center md:text-left">
+    <h3 class="text-4xl  inline-block w-full con-rettangolo relative text-center md:text-left">
       Dati sui questionari
     </h3>
   </div>
@@ -205,14 +199,14 @@
     {{ if select == 'questionari-in-lavorazione' }}
     <div class="p-6 items-center md:grid grid-cols-6 gap-6 ">
       <div class="flex items-center justify-center  col-span-1">
-          <h4 class="corsivo text-6xl text-emerald-600">
+          <h4 class=" text-6xl text-purple-600">
             {{ numero }}
           </h4>
         </div>
 
         <div class="flex items-center col-span-5">
           <p class="text-xl md:text-left pl-3 text-center">
-            I questionari in  <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">lavorazione</strong> nell'ambiente
+            I questionari in  <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">lavorazione</strong> nell'ambiente
           </p>
         </div>
       </div>
@@ -226,14 +220,14 @@
   {{ if select == 'questionari-inviati' }}
   <div class="p-6 items-center md:grid grid-cols-6 gap-6 ">
     <div class="flex items-center justify-center  col-span-1">
-        <h4 class="corsivo text-6xl text-emerald-600">
+        <h4 class=" text-6xl text-purple-600">
           {{ numero }}
         </h4>
       </div>
 
       <div class="flex items-center col-span-5">
         <p class="text-xl md:text-left pl-3 text-center">
-          I questionari  <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">inviati</strong> definitivamente
+          I questionari  <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">inviati</strong> definitivamente
         </p>
       </div>
     </div>
@@ -247,14 +241,14 @@
   {{ if select == 'questionari-tutor-in-lavorazione' }}
   <div class="p-6 items-center md:grid grid-cols-6 gap-6 ">
     <div class="flex items-center justify-center  col-span-1">
-        <h4 class="corsivo text-6xl text-emerald-600">
+        <h4 class=" text-6xl text-purple-600">
           {{ numero }}
         </h4>
       </div>
 
       <div class="flex items-center col-span-5">
         <p class="text-xl md:text-left pl-3 text-center">
-          I questionari tutor in <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">lavorazione</strong> 
+          I questionari tutor in <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">lavorazione</strong> 
         </p>
       </div>
     </div>
@@ -268,14 +262,14 @@
   {{ if select == 'questionari-tutor-inviati' }}
   <div class="p-6 items-center md:grid grid-cols-6 gap-6 ">
     <div class="flex items-center justify-center  col-span-1">
-        <h4 class="corsivo text-6xl text-emerald-600">
+        <h4 class=" text-6xl text-purple-600">
           {{ numero }}
         </h4>
       </div>
 
       <div class="flex items-center col-span-5">
         <p class="text-xl md:text-left pl-3 text-center">
-          I questionari tutor <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">inviati</strong> definitivamente
+          I questionari tutor <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">inviati</strong> definitivamente
         </p>
       </div>
     </div>
@@ -289,15 +283,9 @@
 
 
 
-
-
-
-
-
-
-<section class="inline-block mb-20 ">
+<section class="inline-block mb-20 border-b pb-8">
   <div class="flex items-center">
-    <h3 class="text-4xl corsivo title-pink inline-block w-full con-rettangolo relative text-center md:text-left">
+    <h3 class="text-4xl   inline-block w-full con-rettangolo relative text-center md:text-left">
       Laboratori e Visite
     </h3>
   </div>
@@ -308,14 +296,14 @@
   {{ if select == 'laboratori-formativi-documentati' }}
   <div class="p-6 items-center md:grid grid-cols-6 gap-6 ">
     <div class="flex items-center justify-center  col-span-1">
-        <h4 class="corsivo text-6xl text-emerald-600">
+        <h4 class=" text-6xl text-purple-600">
           {{ numero }}
         </h4>
       </div>
 
       <div class="flex items-center col-span-5">
         <p class="text-xl md:text-left pl-3 text-center">
-          Esperienze di tipo  <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">LABORATORIO</strong>  inserite
+          Esperienze di tipo  <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">LABORATORIO</strong>  inserite
         </p>
       </div>
     </div>
@@ -329,14 +317,14 @@
   {{ if select == 'esperienze-di-tipo-visita-inserite' }}
   <div class="p-6 items-center md:grid grid-cols-6 gap-6 ">
     <div class="flex items-center justify-center  col-span-1">
-        <h4 class="corsivo text-6xl text-emerald-600">
+        <h4 class=" text-6xl text-purple-600">
           {{ numero }}
         </h4>
       </div>
 
       <div class="flex items-center col-span-5">
         <p class="text-xl md:text-left pl-3 text-center">
-          Esperienze di tipo  <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">VISITA</strong> inserite
+          Esperienze di tipo  <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">VISITA</strong> inserite
         </p>
       </div>
     </div>
@@ -351,7 +339,7 @@
 {{ if dossier-finale }}
   <section class="inline-block mb-20 w-full ">
     <div class="flex items-center">
-      <h3 class="text-4xl corsivo title-pink inline-block w-full con-rettangolo relative text-center md:text-left">
+      <h3 class="text-4xl   inline-block w-full con-rettangolo relative text-center md:text-left">
         Dossier finali
       </h3>
     </div>
@@ -362,14 +350,14 @@
     {{ if select == 'dossier-finali' }}
     <div class="p-6 items-center md:grid grid-cols-6 gap-6 ">
       <div class="flex items-center justify-center  col-span-1">
-          <h4 class="corsivo text-6xl text-emerald-600">
+          <h4 class=" text-6xl text-purple-600">
             {{ numero }}
           </h4>
         </div>
 
         <div class="flex items-center col-span-5">
           <p class="text-xl md:text-left pl-3 text-center">
-            I dossier <strong class="bg-gradient-to-r from-emerald-800 to-emerald-800 bg-clip-text text-transparent">finali</strong> esportati definitivamente nell'ambiente.
+            I dossier <strong class="bg-gradient-to-r from-purple-800 to-purple-800 bg-clip-text text-transparent">finali</strong> esportati definitivamente nell'ambiente.
           </p>
         </div>
       </div>
