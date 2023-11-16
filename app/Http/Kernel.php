@@ -14,7 +14,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \App\Http\Middleware\TrustProxies::class,
+        // \App\Http\Middleware\TrustProxies::class,
         // \App\Http\Middleware\TrustProxiesStatic::class,
 
         \Fruitcake\Cors\HandleCors::class,
@@ -24,15 +24,22 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
     ];
 
-    // protected function chooseTrustProxiesMiddleware()
-    // {
-    //     if (env('USE_STATIC_TRUST_PROXIES')) {
-    //         return \App\Http\Middleware\TrustProxiesStatic::class;
-    //     }
-
-    //     return \App\Http\Middleware\TrustProxies::class;
-    // }
-
+    public function __construct()
+    {
+        $this->middleware = array_merge($this->middleware, [
+            $this->chooseTrustProxiesMiddleware(),
+        ]);
+    }
+    
+    protected function chooseTrustProxiesMiddleware()
+    {
+        if (env('USE_STATIC_TRUST_PROXIES')) {
+            return \App\Http\Middleware\TrustProxiesStatic::class;
+        }
+    
+        return \App\Http\Middleware\TrustProxies::class;
+    }
+    
     /**
      * The application's route middleware groups.
      *
