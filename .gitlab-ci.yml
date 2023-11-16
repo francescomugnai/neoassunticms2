@@ -29,7 +29,7 @@ genera-sito:
     stage: genera-sito
     script:
         - cd /opt/neoassunti2024-cms
-        - php please ssg:generate --workers=4
+        - php please ssg:generate
         - cd storage/app/static
         - rm -Rf .git
         - git init -b sviluppo
