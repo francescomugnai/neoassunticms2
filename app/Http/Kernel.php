@@ -24,14 +24,14 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
     ];
 
-    protected function chooseTrustProxiesMiddleware()
-    {
-        if (env('USE_STATIC_TRUST_PROXIES')) {
-            return \App\Http\Middleware\TrustProxiesStatic::class;
-        }
+    // protected function chooseTrustProxiesMiddleware()
+    // {
+    //     if (env('USE_STATIC_TRUST_PROXIES')) {
+    //         return \App\Http\Middleware\TrustProxiesStatic::class;
+    //     }
 
-        return \App\Http\Middleware\TrustProxies::class;
-    }
+    //     return \App\Http\Middleware\TrustProxies::class;
+    // }
 
     /**
      * The application's route middleware groups.
