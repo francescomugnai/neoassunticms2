@@ -49,3 +49,14 @@ genera-sito:
     only:
         - sviluppo
     when: manual
+
+composer-update:
+    stage: composer-update
+    script:
+        - echo "Parte l'update"
+        - composer install --no-interaction --prefer-dist --optimize-autoloader
+    tags:
+        - neoassunti2024-cms-sviluppo
+    only:
+        - sviluppo
+    when: manual
