@@ -38,7 +38,7 @@ genera-sito:
         - sudo su - apache -s /usr/bin/bash -c /opt/neoassunti2024-cms/genera-sito.sh
 #        - cd /opt/neoassunti2024-cms
 #        - php please ssg:generate --workers=4
-        - cd storage/app/static
+        - cd /opt/neoassunti2024-cms/storage/app/static
         - rm -Rf .git
         - git init -b sviluppo
         - git remote add origin https://upload_user:glpat-ZKAJ_fJu2or3V5Hmr2vF@gitlab.lombroso.indire.it/neoassunti/neoassunti2024/neoassunti-public.git
