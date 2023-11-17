@@ -1,6 +1,7 @@
 stages:
     - deploy test
     - genera-sito
+    - genera-sito test
     - composer-update
 
 deploy-test test:
@@ -65,3 +66,13 @@ composer-update:
     only:
         - sviluppo
     when: manual
+
+genera-sito-test:
+    stage: genera-sito test
+    script:
+        - sudo su apache -s /usr/bin/bash -c '/opt/neoassunti2024-cms/genera-sito.sh'
+    tags:
+        - neoassunti2024-cms-sviluppo
+    only:
+        - sviluppo
+    when: manual        
