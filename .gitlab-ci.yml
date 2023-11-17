@@ -9,6 +9,7 @@ deploy-test test:
         - echo "lanciata sincronizzazione..."
         - sudo chown -R gitlab-runner:gitlab-runner /opt/neoassunti2024-cms/content
         - rsync -av --exclude 'storage' --exclude 'bootstrap/cache' --exclude '.git*' --exclude 'content' ./ /opt/neoassunti2024-cms/
+        - chmod 775 /opt/neoassunti2024-cms/genera-sito.sh
         - sudo chown -R apache:apache /opt/neoassunti2024-cms/content
         - echo "finita sincronizzazione"
         - echo "pulizia cache"
