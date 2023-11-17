@@ -229,4 +229,7 @@ return [
 
     ],
 
+    'appurlenv' => env('APP_URL_ENV', ''),
+
+
 ];
