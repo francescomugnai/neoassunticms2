@@ -33,7 +33,7 @@ genera-sito:
     variables:
         USE_STATIC_TRUST_PROXIES: "true"
     script:
-        - sudo su apache
+        - sudo su apache -s /bin/bash
         - cd /opt/neoassunti2024-cms
         - php please ssg:generate --workers=4
         - cd storage/app/static
