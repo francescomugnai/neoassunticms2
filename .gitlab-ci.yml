@@ -33,6 +33,7 @@ genera-sito:
     variables:
         USE_STATIC_TRUST_PROXIES: "true"
     script:
+        - su - apache
         - cd /opt/neoassunti2024-cms
         - php please ssg:generate --workers=4
         - cd storage/app/static
@@ -46,7 +47,7 @@ genera-sito:
         - git push origin sviluppo
         - cd /opt/neoassunti2024-cms
         - rm -Rf storage/app/static
-        - sudo chown -R apache:apache storage
+#        - sudo chown -R apache:apache storage
     tags:
         - neoassunti2024-cms-sviluppo
     only:
