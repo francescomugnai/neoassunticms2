@@ -8,7 +8,7 @@ deploy-test test:
     script:
         - echo "lanciata sincronizzazione..."
         - sudo chown -R gitlab-runner:gitlab-runner /opt/neoassunti2024-cms/content
-        - rsync -av --exclude 'storage' --exclude 'bootstrap/cache' --exclude '.git*' ./ /opt/neoassunti2024-cms/
+        - rsync -av --exclude 'storage' --exclude 'bootstrap/cache' --exclude '.git*' --exclude 'content' ./ /opt/neoassunti2024-cms/
         - sudo chown -R apache:apache /opt/neoassunti2024-cms/content
         - echo "finita sincronizzazione"
         - echo "pulizia cache"
@@ -33,9 +33,9 @@ genera-sito:
     variables:
         USE_STATIC_TRUST_PROXIES: "true"
     script:
-        - sudo su - apache -s /bin/bash
-        - cd /opt/neoassunti2024-cms
-        - php please ssg:generate --workers=4
+        - sudo su - apache -s /bin/bash -c 'cd /opt/neoassunti2024-cms && php please ssg:generate --workers=4'
+        #- cd /opt/neoassunti2024-cms
+        #- php please ssg:generate --workers=4
         - cd storage/app/static
         - rm -Rf .git
         - git init -b sviluppo
