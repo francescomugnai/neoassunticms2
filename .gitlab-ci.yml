@@ -1,7 +1,6 @@
 stages:
     - deploy test
     - genera-sito
-    - genera-sito test
     - composer-update
 
 deploy-test test:
@@ -36,8 +35,6 @@ genera-sito:
         USE_STATIC_TRUST_PROXIES: "true"
     script:
         - sudo su - apache -s /usr/bin/bash -c /opt/neoassunti2024-cms/genera-sito.sh
-#        - cd /opt/neoassunti2024-cms
-#        - php please ssg:generate --workers=4
         - cd /opt/neoassunti2024-cms/storage/app/static
         - rm -Rf .git
         - git init -b sviluppo
@@ -49,7 +46,6 @@ genera-sito:
         - git push origin sviluppo
         - cd /opt/neoassunti2024-cms
         - rm -Rf storage/app/static
-#        - sudo chown -R apache:apache storage
     tags:
         - neoassunti2024-cms-sviluppo
     only:
@@ -68,12 +64,3 @@ composer-update:
         - sviluppo
     when: manual
 
-genera-sito-test:
-    stage: genera-sito test
-    script:
-        - sudo su apache -s /usr/bin/bash -c '/opt/neoassunti2024-cms/genera-sito.sh'
-    tags:
-        - neoassunti2024-cms-sviluppo
-    only:
-        - sviluppo
-    when: manual        
