@@ -19,3 +19,7 @@ yarn-error.log
 /.vscode
 DONTDELETE
 /bootstrap/cache
+
+
+/public/vendor/*
+.gitignore

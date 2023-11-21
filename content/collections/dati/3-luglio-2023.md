@@ -1,7 +1,7 @@
 ---
 id: c7e3200f-4fb6-4e20-819b-19c8b91e545c
 blueprint: dati
-title: '3 luglio 2023'
+title: '3 luglio 2023 (a.s. 22/23)'
 utenti_piattaforma:
   -
     id: ljmute94
@@ -92,6 +92,6 @@ dossier-finale:
     type: aggiungi
     enabled: true
 data_della_formazione: '2023-07-03'
-updated_by: f1b9007c-1bd1-46f8-87e7-3347789e057e
-updated_at: 1688388587
+updated_by: 0c59e488-7bef-45d6-b68d-b821744edb07
+updated_at: 1700558975
 ---
