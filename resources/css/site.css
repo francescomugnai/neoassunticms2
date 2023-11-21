@@ -1,0 +1,208 @@
+/* This is all you. */
+
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.rale {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.titillium {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.bg-home::before {
+  background-image: url('https://neoassunti.indire.it/2022/ext-images/cerchio.png');
+  background-repeat: no-repeat;
+  width: 2000px;
+  height: 2000px;
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: 0;
+  transform: translateY(-50%) translateX(-10%);
+  z-index: 0;
+}
+
+.cover-home {
+  background-image: url(https://neoassunti.indire.it/2022/ext-images/bg-img.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logos-white {
+  filter: brightness(0) invert(.7) drop-shadow(1px 4px 7px rgba(0,0,0,.256));
+}
+
+.framed {
+  box-shadow: -43px -43px 40px -41px rgb(50 152 24 / 10%), 43px 43px 40px -40px rgb(31 149 85 / 10%);
+}
+
+.framed-l {
+  box-shadow: -43px -43px 40px -41px rgb(152 24 86 / 30%), 43px 43px 40px -40px rgb(117 31 149 / 30%);
+}
+
+.framed-bottom {
+  box-shadow: 1px 20px 40px -41px rgb(152 24 86 / 11%), 43px 43px 40px -40px rgb(117 31 149 / 8%);
+}
+
+
+.corsivo {
+  font-family: 'Caveat', cursive;
+}
+
+.corsivo2 {
+  font-family: 'Petit Formal Script', cursive;
+}
+
+.mysticky {
+  position: fixed !important;
+  top: 0;
+}
+
+.bg-gradient-cyan {
+  background-image: linear-gradient(90deg,#6cd5f6 0,#f89d5c 50%,#5b6af0 100%);
+}
+
+.sottotitolospan {
+  border-top: 1px dashed black;
+  content: "";
+  flex: 1 1 auto;
+}
+
+
+/* section.header-toolkit {
+  background-image: url(https://neoassunti.indire.it/2022/ext-images/bg-img2.jpeg);
+  background-size: cover;
+} */
+section.header-toolkit {
+  background-image: url(https://images.unsplash.com/photo-1532423622396-10a3f979251a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80);
+  background-size: cover;
+}
+
+
+
+
+.framed3 {
+  background-image: radial-gradient(at center center, rgb(52, 211, 153), rgb(5, 150, 105), rgb(6, 95, 70));
+  background-size: cover;
+  content: '';
+  position: absolute;
+  height: 2000px;
+  width: 100%;
+  top: -100%;
+  left: 0;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .framed3 {
+    background-image: url(https://neoassunti.indire.it/2022/ext-images/bg2.png);
+    background-size: cover;
+    content: '';
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -100%;
+    left: -50%;
+    opacity: 0.3;
+    z-index: 0;
+    overflow-x: hidden;
+  }
+}
+
+
+
+.title-pink {
+  @apply bg-gradient-to-r from-emerald-600 to-emerald-800 bg-clip-text text-transparent;
+}
+
+.contenitore {
+  @apply container mx-auto max-w-7xl mt-12;
+}
+
+.blocco-editor ul {
+  margin-top: 10px;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+
+
+.testo-ombra-title {
+  text-shadow: 1px 1px 3px #b520c6d1;
+}
+
+.intro-home a {
+  color: #9d174d;
+  box-shadow: inset 0 -2px 0 #9d174d;
+  box-sizing: border-box;
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+}
+
+
+#cookiescript_wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.video-container {
+  overflow: hidden;
+  position: relative;
+  width:100%;
+}
+
+.video-container::after {
+  padding-top: 56.25%;
+  display: block;
+  content: '';
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.blocco-editor table {
+  @apply bg-gray-50 mt-4;
+}
+.blocco-editor table td {
+  @apply p-6 border-r border-gray-200 border-dashed;
+}
+.blocco-editor table tr {
+  @apply border-b border-gray-200;
+}
+
+
+
+.blocco-editor h2 {
+  @apply bg-gradient-to-r from-indigo-500 to-emerald-900 bg-clip-text text-transparent text-3xl;
+}
+.blocco-editor h3 {
+  @apply bg-gradient-to-r from-indigo-500 to-emerald-900 bg-clip-text text-transparent text-2xl;
+}
+
+
+.titolo-sezioni {
+  @apply relative
+  bg-opacity-60
+  before:inline-block before:bg-emerald-200 before:w-4 before:h-0.5 before:transform before:mt-5 
+  after:inline-block after:bg-emerald-200 after:w-4 after:h-0.5 after:transform after:mt-5 
+  bg-gradient-to-b from-emerald-50 to-white text-center py-2 
+  uppercase font-bold text-emerald-600 tracking-widest
+}
+
+

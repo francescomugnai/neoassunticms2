@@ -1,0 +1,106 @@
+
+<section class="titillium bg-gradient-pink2 background-animate overflow-x-hidden relative">
+
+
+
+  <div class="container mx-auto pt-20 pb-10 relative z-10">
+   
+    <div class="flex items-center px-6 lg:px-0">
+      <div class="w-full lg:w-1/2 mb-6 lg:mb-0">
+        <div class="">
+          <div class="mb-8 font-heading max-w-max uppercase font-semibold text-xs tracking-wider text-indigo-900 bg-gradient-blue2 rounded-full">
+            Ultimo aggiornamento:
+            {{ collection:news limit="1" sort="date:desc" }}
+            {{ date format="d M Y" }}
+          {{ /collection:news }}
+          </div>
+          <h1 class="mb-6 font-heading text-7xl md:text-10xl xl:text-7xl bg-gradient-to-r from-slate-900 to-purple-800 bg-clip-text text-transparent  font-bold">
+            Neoassunti <br>
+          </span>   
+          a.s. 2023/2024
+          </h1>
+          <div class="mb-12 text-gray-600 text-lg max-w-lg">
+            {{ intro_home }}
+          </div>
+          <button class="group relative font-heading px-10 py-5 w-full lg:w-auto uppercase text-white text-xs font-semibold tracking-px bg-purple-900 overflow-hidden rounded-md">
+            <div class="absolute top-0 left-0 transform -translate-x-full group-hover:-translate-x-0 h-full w-full transition ease-in-out duration-500 bg-purple-800"></div>
+            <p class="relative z-10">Accedi alla nuova piattaforma</p>
+          </button>
+        </div>
+      </div>
+      
+      <div class="w-full lg:w-1/2 relative">
+        <img class="rounded-xl shadow-2xl" src="{{ config:app:url }}assets/2024/insegnanti_4.webp" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="mt-14 mx-auto">
+          <div class="container mx-auto">
+
+            {{# <div class=" relative  bg-cover top-0 bg-opacity-40 shadow-lg overflow-hidden md:rounded-3xl" style="background-image: url({{ config:app:url }}assets/2024/insegnante.jpg);">
+
+              <div class="relative z-20 flex flex-wrap items-end ">
+                <div class="w-full lg:w-1/2 p-6 md:p-20 lg:pr-0 lg:pl-28 lg:py-28">
+                  <h2 class="mb-7 text-4xl md:text-6xl xl:text-10xl font-bold font-heading leading-none text-slate-700">
+                    Neoassunti <br>
+                    </span>   
+                    a.s. 2023/2024
+                  </h2>
+                  <div class="mb-10 text-lg text-gray-900 space-y-3">
+                    {{ intro_home }}
+                  </div>
+                  <div class="mb-6 md:inline-block">
+                    <a href="https://neoassunti.indire.it/index.php" class="py-4 px-6 w-full text-white font-semibold border border-fuchsia-700 rounded-xl focus:ring focus:ring-emerald-300 bg-fuchsia-600 hover:bg-fuchsia-700 transition ease-in-out duration-200" type="button">
+                      Accesso alla piattaforma
+                    </a>
+                  </div>
+                  <ul>
+                    <li class="inline-flex text-sm text-gray-500 font-medium">Ultimo aggiornamento: </li>
+                    <li class="inline-flex text-sm text-gray-500 font-medium">
+                      {{ collection:news limit="1" sort="date:desc" }}
+                        {{ date format="d M Y"   }}
+                      {{ /collection:news }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div> #}}
+          </div>
+      </section>
+
+
+{{# 
+<div class="relative rale">
+  <div aria-hidden="true" class="hidden absolute w-full h-full lg:block"></div>
+  <div class="relative lg:bg-transparent overflow-y-hidden z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      
+        <div class=" mx-auto m-auto py-20 md:pt-32 blocco-hero ">
+        <div class="lg:pr-16 md:flex items-center justify-center md:space-x-6  relative">
+         
+          <div class="md:w-full">
+          
+            <h3 class="font-bold text-5xl md:text-7xl text-emerald-200 relative inline-block">
+              <span class="text-slate-600">
+               Neoassunti <br>
+              </span>   a.s. 2023/2024
+           </h3>
+          
+           <div class="mt-2 md:text-xl text-gray-600 font-light leading-[2rem] text-left intro-home relative z-10 shadow-2xl p-12">
+              {{ intro_home }}
+            </div>
+         </div>
+
+       
+    
+
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+</div> #}}

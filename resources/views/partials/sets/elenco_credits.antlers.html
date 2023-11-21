@@ -1,0 +1,23 @@
+<div class="rale mt-2">
+    {{ elenco }}
+        <div class="bg-white framed p-6 mb-4 rounded-lg">
+          <h2 class="text-xl font-bold">
+            {{ titolo_sezione }}
+          </h2>
+
+          <div class="mt-2">
+            {{ persona }}
+              <div class="flex items-center space-x-2 mb-2">
+                  <h4>
+                    {{ nome_e_cognome }}
+                  </h4>
+                  <p class="text-xl font-bold corsivo text-purple-600">
+                    {{ ruolo:label }}
+                  </p>
+              </div>
+            {{ /persona }}
+          </div>
+          
+        </div>
+    {{ /elenco }}
+</div>

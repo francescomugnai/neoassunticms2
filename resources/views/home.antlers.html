@@ -1,0 +1,241 @@
+ {{ partial:partials/headerwhiteminimal }}
+ {{ partial:partials/subnavigation }}
+ {{ partial:partials/hero }}
+
+ <section class="relative container mx-auto z-10">
+    {{ box_news }}
+
+    <div class="px-8 lg:px-0 mb-10">
+      <h2 class="rale mb-6 font-heading text-7xl md:text-10xl xl:text-6xl bg-gradient-to-r from-slate-700 to-purple-800 bg-clip-text text-transparent  font-bold">
+       Le ultime notizie
+      </h2>
+    </div>
+
+    <div class="relative z-10 container mx-auto grid md:grid-cols-3 px-8 md:px-0 space-y-6 lg:space-y-0">
+    
+
+        {{ collection:news limit="3" sort="date:desc"  }}
+
+        <div>
+            <div class="p-8 h-full relative z-10 bg-white  shadow-2xl rounded-xl">
+              <div class="flex flex-col justify-between h-full">
+                <div class="mb-16">
+                  <a href="{{ url }}">
+                    <h3 class="mb-4 text-xl font-bold font-heading leading-snug text-slate-800">
+                      {{ title }}
+                    </h3>
+                  </a>
+                  <div class="text-gray-500 text-lg font-regular leading-relaxed">
+                    {{ excerpt }}
+                  </div>
+                </div>
+                <div class="flex flex-wrap justify-between items-center -m-2">
+                  <div class="w-auto p-2">
+                    <div class="flex flex-wrap -m-3">
+                      
+                      <div class="w-auto p-3">
+                        <div class="flex flex-wrap items-center -m-1">
+                          <div class="w-auto p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-purple-800">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+                              </svg>
+                          </div>
+                          <div class="w-auto p-1">
+                            <a href="/news-e-approfondimenti" class="rale font-semibold text-sm leading-relaxed text-purple-800">
+                                {{ categoria }}
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-auto p-2">
+                    <a href="{{ url }}" class="text-purple-600 group-hover:text-fuchsia-700 flex items-center space-x-1" href="#">
+                      <p>
+                        Continua
+                      </p>
+                      <svg width="17" height="16" viewbox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.83333 3.33337L14.5 8.00004M14.5 8.00004L9.83333 12.6667M14.5 8.00004L2.5 8.00004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        {{ /collection:news }}
+
+
+
+</div>
+{{ /box_news }}
+  </section>
+ 
+
+
+
+
+
+    {{ box_normativa }}
+
+    <section  class="relative pt-10 mb-32 mt-20">
+     
+      <div class="relative z-10 container mx-auto px-8 md:px-4">
+        <div class=" mb-10">
+            <h3 class="rale mb-6 font-heading text-7xl md:text-10xl xl:text-6xl bg-gradient-to-r from-slate-700 to-purple-800 bg-clip-text text-transparent  font-bold">
+              {{ sottotitolo_normativa }}
+            </h3>
+        </div>
+
+
+        <div class="flex ">
+     
+          <div class="grid md:grid-cols-3">
+
+            <div class="w-full bg-white shadow-2xl mt-12 md:mt-0  md:py-8 rounded-xl">
+              <div class="flex flex-wrap items-center mb-7">
+                <div class="w-auto p-2">
+                  <div class="relative w-14 h-14 text-2xl font-bold font-heading bg-purple-100 rounded-full">
+                    <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">1</span>
+                  </div>
+                </div>
+                <div class="flex-1 p-2">
+                    <div class="text-xl font-bold rale mb-2 w-full text-slate-700">
+                        {{ box_centrali }}  
+                        {{ box_normativa }}
+                    {{ /box_centrali }} 
+                    </div>
+                  <div class="w-full h-px bg-purple-200"></div>
+                </div>
+              </div>
+
+              <ul class="md:ml-16 text-md text-slate-700 p-8 md:p-0">
+                {{ collection:normativa }}  
+                <li class="{{ if !last }} border-b border-dashed  border-purple-200{{ /if }} p-2">
+                    <a href="{{ config:app:url }}{{ pdf }}" target="_blank">
+                        {{ title }}
+                    </a>
+                </li>
+                {{ /collection:normativa }}  
+              </ul>
+
+            </div>
+
+
+
+            <div class="w-full bg-white shadow-2xl mt-12 md:mt-0 rounded-2xl  md:p-8">
+
+              <div class="flex flex-wrap items-center mb-7">
+                <div class="w-auto p-2">
+                    <div class="relative w-14 h-14 text-2xl font-bold font-heading bg-purple-100 rounded-full">
+                    <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">2</span>
+                  </div>
+                </div>
+                <div class="flex-1 p-2">
+                    <div class="text-xl font-bold rale mb-2 w-full">
+                        {{ box_centrali }}  
+                            {{ box_autoformazione }}
+                        {{ /box_centrali }} 
+                    </div>
+                  <div class="w-full h-px bg-purple-200"></div>
+                </div>
+              </div>
+
+
+              <div class="ml-4 md:ml-20">
+                {{ autoformazione }}
+                {{ if serie }}
+                    <div class="text-gray-500 leading-relaxed">
+                        {{ intro }}
+                    </div>
+                {{ /if }}
+                    {{ /autoformazione }}
+                <div>
+                    {{ if autoformazione }}
+                        {{ autoformazione }}
+
+                          
+                            {{ if links }}
+                                <div class="text-slate-600 mt-2 text-md space-y-2 p-8 md:p-0">
+                                    {{ links }}
+                                </div>
+                            {{ /if  }}
+
+                            {{ serie }}
+                                <ul class="text-gray-500 text-md mt-2 border  border-gray-200 rounded text-sm">
+                                    <li class="border-b  border-gray-200 p-2 bg-purple-50 font-semibold">
+                                        {{ title }}
+                                    </li>
+                                    {{ video }}
+                                        <li class="  border-gray-200 p-2">
+                                            <a target="_blank" href="{{ video_ddi }}">
+                                                {{ testo }}
+                                            </a>
+                                        </li>
+                                    {{ /video }}
+                                </ul>
+                            {{ /serie }}
+                        {{ /autoformazione }}
+                    {{ /if  }}
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="w-full bg-white shadow-2xl rounded-2xl  mt-12 md:mt-0 p-8">
+
+              <div class="flex flex-wrap items-center mb-7">
+                <div class="w-auto p-2">
+                  <div class="relative w-14 h-14 text-2xl font-bold font-heading bg-purple-100 rounded-full">
+                    <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">3</span>
+                  </div>
+                </div>
+                <div class="flex-1 p-2">
+                    <div class="text-xl font-bold rale mb-2 w-full text-slate-700 p-8 md:p-0">
+                        {{ box_centrali }}  
+                            {{ box_dati_della_formazione }}
+                        {{ /box_centrali }} 
+                    </div>
+                  <div class="w-full h-px bg-purple-200"></div>
+                </div>
+              </div>
+
+
+              {{ dati_formazione }}
+                    <div class="text-gray-500 leading-relaxed">
+                        {{ intro }}
+                    </div>
+                {{ /dati_formazione }}
+
+                <div class="flex">
+                    <a href="{{ config:app:url }}dati-della-formazione" class="border w-full  border-purple-200  bg-gradient-to-b from-white to-purple-50 p-2 shadow-light mt-4 text-md text-purple-600 font-bold text-center">
+                        Visualizza dati
+                    </a>  
+                </div>            
+
+
+            </div>
+         
+          </div>
+          
+       
+        </div>
+      </div>
+    </section>
+
+
+ {{ /box_normativa }}
+
+
+
+
+
+
+      
+   
+
+
+
+{{ partial:partials/footer }}

@@ -1,0 +1,68 @@
+stages:
+    - deploy test
+    - genera-sito
+    - composer-update
+
+deploy-test test:
+    stage: deploy test
+    script:
+        - echo "lanciata sincronizzazione..."
+        - rsync -av --exclude 'storage' --exclude 'bootstrap/cache' --exclude '.git*' --exclude 'content' --exclude 'public/assets' --exclude 'resources' --exclude 'users'  ./ /opt/neoassunti2024-cms/
+        - chmod 775 /opt/neoassunti2024-cms/genera-sito.sh
+        - sudo chown -R apache:apache /opt/neoassunti2024-cms/content
+        - sudo chown -R apache:apache /opt/neoassunti2024-cms/public/assets
+        - sudo chown -R apache:apache /opt/neoassunti2024-cms/resources
+        - sudo chown -R apache:apache /opt/neoassunti2024-cms/users
+        - echo "finita sincronizzazione"
+        - echo "pulizia cache"
+        - composer install --no-interaction --prefer-dist --optimize-autoloader
+        - cd /opt/neoassunti2024-cms
+        # - php artisan migrate:refresh --force
+        # - php artisan migrate --force
+        # - php artisan db:seed --force
+        # - php artisan db:seed --class=StandardsTableSeeder
+        # - php artisan db:seed --class=UsersTableSeeder
+        - php artisan config:clear
+        - php artisan cache:clear
+        - php artisan event:clear
+
+    tags:
+        - neoassunti2024-cms-sviluppo
+    only:
+        - sviluppo
+
+genera-sito:
+    stage: genera-sito
+    variables:
+        USE_STATIC_TRUST_PROXIES: "true"
+    script:
+        - sudo su - apache -s /usr/bin/bash -c /opt/neoassunti2024-cms/genera-sito.sh
+        - cd /opt/neoassunti2024-cms/storage/app/static
+        - rm -Rf .git
+        - git init -b sviluppo
+        - git remote add origin https://upload_user:glpat-ZKAJ_fJu2or3V5Hmr2vF@gitlab.lombroso.indire.it/neoassunti/neoassunti2024/neoassunti-public.git
+        - git add .
+        - git commit -m "update sito $CI_COMMIT_TIMESTAMP"
+        - git pull origin -X ours -t sviluppo --allow-unrelated-histories --no-rebase --no-edit
+        - git fetch origin sviluppo
+        - git push origin sviluppo
+        - cd /opt/neoassunti2024-cms
+        - rm -Rf storage/app/static
+    tags:
+        - neoassunti2024-cms-sviluppo
+    only:
+        - sviluppo
+    when: manual
+
+composer-update:
+    stage: composer-update
+    script:
+        - echo "Parte update"
+        - composer install --no-interaction --prefer-dist --optimize-autoloader
+
+    tags:
+        - neoassunti2024-cms-sviluppo
+    only:
+        - sviluppo
+    when: manual
+

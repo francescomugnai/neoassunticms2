@@ -1,10 +1,10 @@
 ---
 id: home
 blueprint: pages
-title: 'Home 2'
+title: Home
 template: home
-updated_by: 21c4279e-5cb3-40c2-9e11-eb95ec6c3756
-updated_at: 1700465731
+updated_by: f1b9007c-1bd1-46f8-87e7-3347789e057e
+updated_at: 1698919774
 intro_home:
   -
     type: paragraph
@@ -55,8 +55,7 @@ box_centrali:
     box_dati_della_formazione: 'DATI DELLA FORMAZIONE'
 seo:
   description: |-
-    Gentile docente, benvenuto nella sito pubblico di Neoassunti, anno scolastico 2023-2024.
+    Gentile docente, benvenuto nella sito pubblico di Neoassunti, anno scolastico 2022-2023.
     Prossimamente apriremo la parte privata dell'ambiente dove, previo login, potrai iniziare a documentare il tuo anno di formazione e prova o di passaggio di ruolo.
-  canonical_url: 'https://neoassunti.lombroso.indire.it/'
 ---
 Welcome to your new Statamic website.
