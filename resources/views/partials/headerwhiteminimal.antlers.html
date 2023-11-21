@@ -1,0 +1,116 @@
+<div class="bg-white">
+
+
+  <header class="relative z-30">
+    <nav aria-label="Top">
+
+      <div class="bg-gray-900 ">
+        <div class="container md:mx-auto flex items-center justify-between py-4">
+          <div class="flex items-center justify-end w-full px-6 md:px-0">
+              <div class="flex md:flex-row flex-col space-y-6 md:space-y-0 justify-between w-full">
+                    <div class="flex items-center justify-center">
+                        <a href="https://www.indire.it/" rel="noopener" target="_blank">
+                          <img class="w-[120px] md:w-24" src="{{ config:app:url }}assets/loghi/logo_indire_bianco.svg" alt="Logo Indire">
+                        </a>
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <a href="https://www.miur.gov.it/" rel="noopener" target="_blank">
+                          <img class="md:max-w-[200px] w-[200px]" src="{{ config:app:url }}assets/loghi/logo_mim_bianco.png" alt="Logo Ministero dell'istruzione e del merito">
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center justify-center">
+                        <a href="https://www.miur.gov.it/web/guest/DGPER" rel="noopener" target="_blank">
+                            <img class="w-[120px] md:w-24 logos-white" src="{{ config:app:url }}assets/loghi/dg.png" alt="Logo DG Personale Scolastico">
+                        </a>
+                    </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="
+      bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900
+      myheader z-50 relative rale">
+        <div 
+        x-data="sticky()"
+        x-init="stickyElement('.mynav', '.myheader', 'aaa', true)"
+        :class="inscroll ? 'bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow-2xl  mx-auto ': 'border-b border-gray-200'"
+        class="mynav w-full z-50">
+          <div class="container mx-auto">
+            <div class="h-16 md:flex md:items-center justify-between w-full">
+
+              <div class="flex items-center justify-between px-6 md:px-0">
+                <a class="text-xl md:text-2xl  font-semibold
+                bg-gradient-to-r from-purple-300 via-white to-slate-300 bg-clip-text text-transparent  
+                " href="{{ config:app:url }}">
+                  Neoassunti a.s. 2023/2024
+                </a>
+                <div class="md:hidden block">
+                  {{ partial:partials/menu-mobile }}
+                </div>
+              </div>
+
+
+              <div class="hidden flex-1 md:flex items-center justify-end">
+                <div class="flex items-end justify-end lg:ml-8">
+                  <ul class="flex space-x-8 text-xl">
+                    {{ nav:main include_home="true" }} 
+                      <li class="flex items-center space-x-4">
+                        {{ if is_current }}
+                          <img class="w-2" src="{{ config:app:url }}assets/circle-active.svg" alt="cerchio">
+                        {{ elseif segment_1 == slug}}
+                          <img class="w-2" src="{{ config:app:url }}assets/circle-active.svg" alt="cerchio">
+                        {{ else }}  
+                          <img class="w-2" src="{{ config:app:url }}assets/circle.svg" alt="cerchio">
+                        {{ /if }}
+                          <div class="relative">
+                            <a class="text-white" href="{{ if slug == 'home' }}{{ config:app:url }}{{ else }}{{ config:app:url }}{{ slug }}{{ /if }}">
+                                {{ title }}
+                            </a>
+                          </div>
+                      </li>
+                    {{ /nav:main }} 
+                    {{# <li class="flex items-center space-x-4">
+                      <img class="w-2" src="{{ config:app:url }}assets/circle.svg" alt="cerchio">
+                      <div class="relative">
+                        <a class="text-white" href="{{ config:app:url }}ticket/">
+                            Assistenza
+                        </a>
+                      </div>
+                    </li>  #}}
+                    <li class="flex items-center space-x-4 list-none">
+                      <div class="relative">
+                        {{# <a class="group relative font-heading px-4 py-2 w-full lg:w-auto uppercase text-white text-lg font-semibold tracking-px bg-purple-700 overflow-hidden rounded-md">
+                          Login
+                        </a> #}}
+
+                        <a href="https://iamsidicoll.pubblica.istruzione.it/federazione-indire-web/" class="group relative p-0.5 font-heading block w-full md:w-auto text-lg text-white font-medium bg-gradient-cyan overflow-hidden rounded-lg">
+                  
+                          <div class="py-1 px-5 bg-slate-900 rounded-lg">
+                            <p class="relative z-10 font-bold" data-config-id="auto-txt-5-5">
+                              LOGIN
+                            </p>
+                          </div>
+                        </a>
+                   
+                      </div>
+                    </li> 
+
+                  
+         
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </nav>
+  </header>

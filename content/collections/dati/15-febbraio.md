@@ -73,6 +73,6 @@ dati-sui-laboratori:
     type: aggiungi
     enabled: true
 updated_by: 0c59e488-7bef-45d6-b68d-b821744edb07
-updated_at: 1700295645
+updated_at: 1673614439
 data_della_formazione: '2022-02-15'
 ---

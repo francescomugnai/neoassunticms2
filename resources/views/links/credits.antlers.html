@@ -1,0 +1,8 @@
+
+{{ partial:partials/headerwhiteminimal }}
+  <div class="container mx-auto pt-16 rale mb-20 relative z-10 blocco-editor">
+    {{ editor }}
+      {{ partial src="sets/{type}"  }}
+    {{ /editor }}
+  </div>
+{{ partial:partials/footer class="mt-24" }}
