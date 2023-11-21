@@ -1,10 +1,10 @@
 ---
 id: home
 blueprint: pages
-title: 'Home 2'
+title: Home
 template: home
 updated_by: 21c4279e-5cb3-40c2-9e11-eb95ec6c3756
-updated_at: 1700465731
+updated_at: 1700549948
 intro_home:
   -
     type: paragraph
