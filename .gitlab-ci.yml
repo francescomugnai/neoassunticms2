@@ -15,8 +15,8 @@ deploy-test test:
         - sudo chown -R apache:apache /opt/neoassunti2024-cms/users
         - echo "finita sincronizzazione"
         - echo "pulizia cache"
-        - composer install --no-interaction --prefer-dist --optimize-autoloader
         - cd /opt/neoassunti2024-cms
+        - composer install --no-interaction --prefer-dist --optimize-autoloader
         # - php artisan migrate:refresh --force
         # - php artisan migrate --force
         # - php artisan db:seed --force
