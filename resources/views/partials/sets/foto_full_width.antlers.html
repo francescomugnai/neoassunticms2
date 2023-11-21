@@ -1,0 +1,9 @@
+{{ if full_width_foto }}
+{{ full_width_foto }}
+  <div class="flex items-center justify-center">
+    <img class="{{ spaziatura }} {{ if full_width_foto_ombra == true }} shadow-2xl {{ /if }} max-w-7xl" 
+    src="{{ glide:url width="100%" format="webp" quality="70" }}" 
+    alt="{{ alt }}">
+  </div>
+{{ /full_width_foto }}
+{{ /if}}

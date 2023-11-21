@@ -1,6 +1,6 @@
 title: '@seo:title'
 description: '@seo:content'
-site_name: 'Neoassunti a.s. 2022/2023'
+site_name: 'Neoassunti a.s. 2023/2024'
 site_name_position: after
 site_name_separator: '|'
 canonical_url: '@seo:permalink'
